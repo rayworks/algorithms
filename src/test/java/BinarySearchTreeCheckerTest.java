@@ -32,6 +32,11 @@ public class BinarySearchTreeCheckerTest {
                 .toArray(new String[6]);
         Assert.assertTrue(checker.isBST(TreeHelper.buildTreeFrom(values)));
 
+        TreeNode treeNode = TreeHelper.buildTreeFrom(values);
+        TreeHelper.printLevelTree(treeNode);
+        int minElem = checker.getMinimumDifference(treeNode);
+        System.out.println("Min diff " + minElem);
+
 
         int min = -(int) Math.pow(2, 31);
         int max = (int) Math.pow(2, 31) - 1;
