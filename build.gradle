@@ -28,3 +28,11 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
 }
+
+/**
+ * show unit test result in console:
+ * http://trickyandroid.com/gradle-tip-4-log-unit-test-execution-events-into-console/
+ */
+tasks.matching { it instanceof Test }.all {
+    testLogging.events = ["failed", "passed", "skipped"]
+}
