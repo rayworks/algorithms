@@ -18,8 +18,7 @@ public class RootLeafSumPathFinderTest {
     @Test
     public void pathSum() {
         // 5,4,8,11,null,13,4,7,2,null,null,5,1
-        String[] values = {"5", "4", "8", "11", "null", "13", "4", "7", "2", "null", "null", "5", "1",
-                 "null", "null", "null", "null", "null", "null",  "null", "null"};
+        String[] values = {"5", "4", "8", "11", "null", "13", "4", "7", "2", "null", "null", "null", "null", "5", "1"};
         TreeNode root = TreeHelper.buildTreeFrom(values);
 
         List<List<Integer>> lists = new RootLeafSumPathFinder().pathSum(root, 22);
