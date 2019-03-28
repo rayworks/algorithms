@@ -1,5 +1,6 @@
 package org.sean.array;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
@@ -12,7 +13,10 @@ public class LetterCombinationFinderTest {
 
     @Test
     public void letterCombinations() {
-        List<String> list = combinationFinder.letterCombinations("234");
-        System.out.println(list);
+        List<String> list = combinationFinder.letterCombinations("23");
+
+        String[] expected = {"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"};
+
+        Assert.assertArrayEquals(expected, list.toArray(new String[list.size()]));
     }
 }
