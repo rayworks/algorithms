@@ -17,8 +17,8 @@ repositories {
     jcenter()
 }
 
-setSourceCompatibility(JavaVersion.VERSION_1_7)
-setTargetCompatibility(JavaVersion.VERSION_1_7)
+setSourceCompatibility(JavaVersion.VERSION_1_8)
+setTargetCompatibility(JavaVersion.VERSION_1_8)
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
