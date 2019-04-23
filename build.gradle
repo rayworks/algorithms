@@ -40,3 +40,7 @@ dependencies {
 tasks.matching { it instanceof Test }.all {
     testLogging.events = ["failed", "passed", "skipped"]
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14.1'
+}
