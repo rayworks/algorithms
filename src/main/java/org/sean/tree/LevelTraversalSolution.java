@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.sean.utils.MathLib.log2;
+
 /**
  * Created by Sean on 11/17/16.
  * <p/>
@@ -11,9 +13,6 @@ import java.util.List;
  * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
  */
 public class LevelTraversalSolution {
-    public static int log2(int n) {
-        return (int) (Math.log(n) / Math.log(2));
-    }
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> resultList = new LinkedList<List<Integer>>();

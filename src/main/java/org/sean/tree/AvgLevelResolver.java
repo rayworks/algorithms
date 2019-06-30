@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.sean.utils.MathLib.log2;
+
 /***
  * 637. Average of Levels in Binary Tree
  *
@@ -17,10 +19,6 @@ import java.util.List;
  * Output: [3, 14.5, 11]
  */
 public class AvgLevelResolver {
-    public static int log2(int n) {
-        return (int) (Math.log(n) / Math.log(2));
-    }
-
     /***
      * @see {@link LevelTraversalSolution}
      */
