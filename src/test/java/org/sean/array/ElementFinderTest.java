@@ -1,3 +1,5 @@
+package org.sean.array;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.sean.array.ElementFinder;

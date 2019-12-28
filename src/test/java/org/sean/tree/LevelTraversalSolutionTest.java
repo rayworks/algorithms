@@ -1,3 +1,5 @@
+package org.sean.tree;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.sean.tree.LevelTraversalSolution;
