@@ -9,11 +9,9 @@ public class MinPathFinder {
     private int column;
 
     public int minPathSum(int[][] grid) {
-        if (grid == null || grid.length == 0)
-            return 0;
+        if (grid == null || grid.length == 0) return 0;
 
-        if (grid.length == 1 && grid[0].length == 1)
-            return grid[0][0];
+        if (grid.length == 1 && grid[0].length == 1) return grid[0][0];
 
         // m
         row = grid.length;
@@ -22,38 +20,36 @@ public class MinPathFinder {
 
         marks = new int[row][column];
 
-        int minSum = calcMinSum(grid, row - 1, column - 1);
-        return minSum;
+        return calcMinSum(grid, row - 1, column - 1);
     }
 
     private int calcMinSum(int[][] grid, int row, int column) {
         if (row < 0 || column < 0) {
-            return 0;
+            return -1; // non-negative values for each cell
         }
 
         if (marks[row][column] != 0) {
             return marks[row][column];
         }
 
-        int sumMin = grid[row][column];
-        if (row == 0 || column == 0) {
-            if (row == 0 && column == 0) {
-                return grid[0][0];
-            }
-
-            if (row == 0) {
-                return sumMin + calcMinSum(grid, row, column - 1);
-            } else {
-                // column == 0
-                return sumMin + calcMinSum(grid, row - 1, column);
-            }
-
+        if (row == 0 && column == 0) {
+            return grid[0][0];
         }
+
+        int sumMin = grid[row][column];
 
         int topResult = calcMinSum(grid, row - 1, column);
         int leftResult = calcMinSum(grid, row, column - 1);
 
-        int sum = sumMin + Math.min(leftResult, topResult);
+        int subMin;
+        if (topResult >= 0 && leftResult >= 0) {
+            // Calling method Math.min() takes extra time!
+            subMin = leftResult < topResult ? leftResult : topResult;
+        } else {
+            subMin = topResult < 0 ? leftResult : topResult;
+        }
+
+        int sum = sumMin + subMin;
 
         marks[row][column] = sum;
         return sum;
