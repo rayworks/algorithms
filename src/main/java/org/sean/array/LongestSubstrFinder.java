@@ -1,6 +1,7 @@
 package org.sean.array;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /***
  * 3. Longest Substring Without Repeating Characters
@@ -9,7 +10,7 @@ public class LongestSubstrFinder {
     // "didf"
     // "bziuwnklhqzrxnb"
     // "qrsvbspk"
-    public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring0(String s) {
         int totalLen = 0;
 
         if (s.length() == 0)
@@ -59,5 +60,35 @@ public class LongestSubstrFinder {
         }
 
         return totalLen;
+    }
+
+    Set<Character> set = new HashSet<>();
+
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null) return 0;
+        if (s.length() <= 1) return s.length();
+
+        set.clear();
+
+        int max = Integer.MIN_VALUE;
+
+        int cnt = s.length();
+        int i = 0;
+        int j = i;
+        while (i <= j && j < cnt) {
+            char ch = s.charAt(j);
+
+            if (set.contains(ch)) {
+                set.remove(s.charAt(i++));
+            } else {
+                set.add(ch);
+                if (max < j - i + 1) {
+                    max = j - i + 1;
+                }
+                ++j;
+            }
+        }
+
+        return max;
     }
 }
