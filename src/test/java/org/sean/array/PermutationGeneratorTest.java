@@ -15,14 +15,14 @@ public class PermutationGeneratorTest {
     }
 
     @Test
-    public void generateEmpty(){
+    public void generateEmpty() {
         Assert.assertTrue(pg.generate(null, 0).isEmpty());
     }
 
     @Test
     public void generate() {
         List<String> list = pg.generate("a", 0);
-        Assert.assertArrayEquals(new String[]{"a"}, list.toArray());
+        Assert.assertArrayEquals(new String[] {"a"}, list.toArray());
 
         list = pg.generate("ab", 0);
         Assert.assertEquals(2, list.size());
