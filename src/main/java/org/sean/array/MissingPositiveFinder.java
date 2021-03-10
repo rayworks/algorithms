@@ -68,7 +68,7 @@ public class MissingPositiveFinder {
         nums[j] = t;
     }
 
-    public int firstMissingPositive0(int[] nums) { // O(N) time | O(1) space
+    public int firstMissingPositive0(int[] nums) { // O(N) time | O(N) space
         if (nums == null || nums.length == 0) return 1;
 
         Set<Integer> set = new HashSet<>();
