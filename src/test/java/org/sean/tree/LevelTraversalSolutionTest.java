@@ -40,7 +40,7 @@ public class LevelTraversalSolutionTest {
 
         System.out.println("level order from bottom to top:");
 
-        List<List<Integer>> result = new LevelTraversalSolution().levelOrderBottom(root);
+        List<List<Integer>> result = new LevelTraversalSolution().levelOrderBottom0(root);
         for (List<Integer> list : result) {
             System.out.println(Arrays.toString(list.toArray(new Integer[list.size()])));
         }

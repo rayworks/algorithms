@@ -1,18 +1,37 @@
 package org.sean.tree;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import static org.sean.utils.MathLib.log2;
 
 /**
  * Created by Sean on 11/17/16.
- * <p/>
- * Leetcode : 107. Binary Tree Level Order Traversal II
+ *
+ * <p>Leetcode : 107. Binary Tree Level Order Traversal II
  * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
  */
 public class LevelTraversalSolution {
+    public List<List<Integer>> levelOrderBottom0(TreeNode root) {
+        if (root == null) return Collections.emptyList();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        List<List<Integer>> result = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            List<Integer> list = new ArrayList<>();
+            int levelSize = queue.size();
+
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode treeNode = queue.poll();
+                list.add(treeNode.val);
+
+                if (treeNode.left != null) queue.add(treeNode.left);
+                if (treeNode.right != null) queue.add(treeNode.right);
+            }
+            result.add(0, list);
+        }
+        return result;
+    }
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> resultList = new LinkedList<List<Integer>>();
@@ -35,7 +54,7 @@ public class LevelTraversalSolution {
         while (queue.size() > 0) {
             TreeNode node = queue.remove();
             count = sequences.remove();
-            //++count;
+            // ++count;
 
             if (node != null) {
                 int index = log2(count);
