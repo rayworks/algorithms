@@ -85,4 +85,29 @@ public class Lca {
         // as a fallback
         return root;
     }
+
+    // solution2:
+    private TreeNode target;
+    int lookup(TreeNode node, TreeNode p, TreeNode q) {
+        if (node == null || target != null) return 0;
+
+        int curr = 0;
+        if (node.val == p.val) curr = 1;
+        else if (node.val == q.val) curr = 2;
+
+        int left = lookup(node.left, p, q);
+        int right = lookup(node.right, p, q);
+
+        if (curr + left + right == 3) {
+            if (target == null) target = node;
+        }
+        return curr + left + right;
+    }
+
+    public TreeNode lowestCommonAncestor0(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || p == root || q == root) return root;
+
+        lookup(root, p, q);
+        return target == null ? root : target;
+    }
 }
