@@ -6,10 +6,6 @@ import java.util.*;
 
 /**
  * * 297. Serialize and Deserialize Binary Tree
- *
- * <p>Note: The first solution (BFS) based on the sequence of the node is flawed if depth of the
- * tree is larger than 31. In that case, the sequence number will be at least 2 ^ 32 which is out of
- * range for an Integer.
  */
 public class TreeSerializer {
 

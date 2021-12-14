@@ -2,7 +2,7 @@ package org.sean.array;
 
 import java.util.*;
 
-// LeetCode 904 https://leetcode.com/problems/fruit-into-baskets/
+// 904 Fruit into baskets
 public class FruitCounter {
     public int totalFruit1(int[] fruits) {
         // Sliding Window

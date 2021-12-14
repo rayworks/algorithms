@@ -2,15 +2,17 @@ package org.sean.recursive;
 
 import java.util.Arrays;
 
-/** * 63. Unique Paths II */
+/**
+ * 63. Unique Paths II
+ */
 public class UniquePaths2 {
     private int[][] cache;
 
     /**
      * * Counts the unique path for an obstacle Grid
      *
-     * @param m width of grid
-     * @param n height of grid
+     * @param m            width of grid
+     * @param n            height of grid
      * @param obstacleGrid two-dimensional array
      * @return number of unique path from [0, 0] -> [m-1, n-1]
      */
@@ -48,6 +50,47 @@ public class UniquePaths2 {
             cache[m - 1][n - 2] = left;
         }
         return up + left;
+    }
+
+    /// solution II
+    private int[][] dp;
+
+    public int uniquePaths2(int m, int n, int[][] obstacleGrid) {
+        int row = m;
+        int col = n;
+
+        if (obstacleGrid[m - 1][n - 1] == 1 || obstacleGrid[0][0] == 1)
+            return 0;
+
+        dp = new int[m + 1][n + 1];
+        dp[1][1] = 1;
+
+        for (int j = 1; j <= row; j++) {
+            for (int i = 1; i <= col; i++) {
+                if (obstacleGrid[j - 1][i - 1] == 1) {
+                    dp[j][i] = 0;
+                    continue;
+                }
+
+                if (j == 1 && i == 1)
+                    continue;
+
+                if (j == 1 || i == 1) {
+                    if (j == 1) {
+                        dp[j][i] = dp[j][i - 1] != 0 ? 1 : 0;
+                    } else {
+                        dp[j][i] = dp[j - 1][i] != 0 ? 1 : 0;
+                    }
+                } else {
+                    dp[j][i] = getCnt(j, i - 1, obstacleGrid) + getCnt(j - 1, i, obstacleGrid);
+                }
+            }
+        }
+        return dp[m][n];
+    }
+
+    private int getCnt(int r, int c, int[][] array) {
+        return array[r - 1][c - 1] == 1 ? 0 : dp[r][c];
     }
 
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
