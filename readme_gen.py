@@ -22,5 +22,5 @@ if __name__ == "__main__":
         if tp != topic:
             topic = tp
             display_topic = tp.capitalize()
-        print('| {} | {} |'.format(display_topic, '[{}]({})\n'.format(titles[i].strip(), paths[i].strip())))
+        print('| {} | {} |'.format(display_topic, '[{}]({})'.format(titles[i].strip(), paths[i].strip())))
         #print('[{}]({})\n'.format(titles[i].strip(), paths[i].strip()))
