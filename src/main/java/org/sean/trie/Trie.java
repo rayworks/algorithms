@@ -51,6 +51,38 @@ public class Trie {
         insert(this, word, 0);
     }
 
+    /***
+     * Retrieves the longest prefix of the given word from the trie.
+     *
+     * @param outPrefix the output {@link StringBuilder}
+     * @param matches the output list of matched known words
+     * @param word the word to retrieve the prefix from
+     * @param pos the current position in the word
+     */
+    public void lookupPrefix(StringBuilder outPrefix, List<String> matches, String word, int pos) {
+        if (pos >= word.length()) {
+            return;
+        }
+
+        char ch = word.charAt(pos);
+        if (!isRoot) {
+            if (val == ch) {
+                outPrefix.append(val);
+                if (isEndOfWord) {
+                    matches.add(outPrefix.toString());
+                }
+
+                for (Trie tn : children) {
+                    tn.lookupPrefix(outPrefix, matches, word, pos + 1);
+                }
+            }
+        } else {
+            for (Trie tn : children) {
+                tn.lookupPrefix(outPrefix, matches, word, pos);
+            }
+        }
+    }
+
     private boolean search(String word, int pos) {
         if (pos >= word.length()) {
             return isEndOfWord;
