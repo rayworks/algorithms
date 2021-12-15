@@ -33,4 +33,9 @@ public class CardIssuerTest {
 
         Assert.assertEquals(null, cardIssuer.detectNetwork("91123456789012345"));
     }
+
+    @Test
+    public void testOverlappedPrefixWithLengthLimit() {
+        Assert.assertEquals("Maestro", cardIssuer.detectNetwork("6221261234567"));
+    }
 }

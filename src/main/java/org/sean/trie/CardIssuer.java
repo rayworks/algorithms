@@ -87,17 +87,22 @@ public class CardIssuer {
         if (matchedPrefixes.isEmpty()) return null;
 
         String longestPrefix = builder.toString();
-        String lastMatchedPrefix = matchedPrefixes.get(matchedPrefixes.size() - 1);
-        if (!longestPrefix.equals(lastMatchedPrefix)) { // 622125 -> 62
-            longestPrefix = lastMatchedPrefix;
+        int matchedLen = matchedPrefixes.size();
+        for (int i = matchedLen - 1; i >= 0; i--) {
+            String lastMatchedPrefix = matchedPrefixes.get(i);
+
+            String name = prefixCard.get(lastMatchedPrefix);
+            if (name == null) continue;
+
+            int len = cardNumber.length();
+            Optional<Integer> opt = cardLengths.get(name).stream().filter(n -> n == len).findFirst();
+            if (opt.isPresent()) {
+                System.out.println(">>> matched prefix: " + lastMatchedPrefix + ", name: " + name + ", length: " + len);
+                return name;
+            }
         }
 
-        String name = prefixCard.get(longestPrefix);
-        if (name == null) return null;
-
-        int len = cardNumber.length();
-        Optional<Integer> opt = cardLengths.get(name).stream().filter(i -> i == len).findFirst();
-        return opt.isPresent() ? name : null;
+        return null;
     }
     // endregion
 
