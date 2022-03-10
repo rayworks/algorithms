@@ -7,8 +7,6 @@ import java.util.*;
  */
 public class WordSearcher {
 
-    private boolean[][] visited;
-
     // dfs + backtracking
     private boolean search(
             char[][] board, String word, int pos, int x, int y, boolean[][] visited) {
@@ -80,7 +78,7 @@ public class WordSearcher {
     Stack<int[]> stack = new Stack<>();
     Map<Character, List<int[]>> map = new HashMap<>();
 
-    public boolean exist(char[][] board, String word) {
+    public boolean exist0(char[][] board, String word) {
         if (board == null || board.length == 0 || word == null) return false;
         int row = board.length;
         int column = board[0].length;
@@ -231,4 +229,65 @@ public class WordSearcher {
         }
         return false;
     }
-}
+
+    // region backtracking
+    boolean found = false;
+    int[][] moves =  new int[][]{
+            {0, 1}, {1, 0}, {0, -1}, {-1, 0}
+    };
+
+    boolean[][] visited;
+    void searchWord(char[][] board, String word, int pos, int currR, int currC) {
+
+        if(pos >= word.length() - 1) {
+            found = true;
+            return;
+        }
+
+        int rMax = board.length;
+        int cMax = board[0].length;
+
+        char next = word.charAt(pos + 1);
+        for (int i = 0; i < moves.length; i++) {
+            int[] mv = moves[i];
+            int nR = currR + mv[0];
+            int nC = currC + mv[1];
+            if (nR >= 0 && nR < rMax && nC >= 0 && nC < cMax && !visited[nR][nC]) {
+                if(board[nR][nC] == next) {
+                    visited[nR][nC] = true;
+
+                    searchWord(board, word, pos + 1, nR, nC);
+                    if(found) return;
+
+                    visited[nR][nC] = false;
+                }
+            }
+        }
+    }
+
+    public boolean exist(char[][] board, String word) {
+        int row = board.length;
+        int col = board[0].length;
+
+        visited = new boolean[row][col];
+
+        outer: for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (found) {
+                    break outer;
+                }
+
+                if(board[i][j] == word.charAt(0)) {
+                    visited[i][j] = true;
+                    searchWord(board, word, 0, i, j);
+                    visited[i][j] = false;
+                }
+                if (found) {
+                    break outer;
+                }
+            }
+        }
+        return found;
+    }
+    // endregion backtracking
+ }
