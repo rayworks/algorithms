@@ -4,6 +4,7 @@
 
 | Category | Problem |
 | --------- | ------------------ |
+| Base | [53. Maximum Subarray](./src/main/java/org/algo/base/MaxSubSum.java) |
 | Tree | [235. Lowest Common Ancestor of a Binary Search Tree](./src/main/java/org/sean/tree/Lca.java) |
 |   | [199. Binary Tree Right Side View](./src/main/java/org/sean/tree/BinaryTreeRightSide.java) |
 |   | [669. Trim a Binary Search Tree](./src/main/java/org/sean/tree/BinarySearchTreeTrimmer.java) |
@@ -20,17 +21,18 @@
 |   | [107. Binary Tree Level Order Traversal II](./src/main/java/org/sean/tree/LevelTraversalSolution.java) |
 |   | [951 Flip Equivalent Binary Trees](./src/main/java/org/sean/tree/FlipEquivalentTree.java) |
 |   | [617. Merge Two Binary Trees](./src/main/java/org/sean/tree/TreeMerger.java) |
-|   | [545. Boundary of Binary Tree](./src/main/java/org/sean/tree/TreeBoundary.java) |
 | Array | [22. Generate Parentheses](./src/main/java/org/sean/array/ParenthesesGenerator.java) |
 |   | [703. Kth Largest Element in a Stream](./src/main/java/org/sean/array/KthStreamLargest.java) |
-|   | [189. Rotate Array](./src/main/java/org/sean/array/RotateArray.java) |
 |   | [925. Long Pressed Name](./src/main/java/org/sean/array/LongPressedName.java) |
+|   | [1833. Maximum Ice Cream Bars](./src/main/java/org/sean/array/IceCreamCounter.java) |
+|   | [1079. Letter Tile Possibilities](./src/main/java/org/sean/array/LetterTile.java) |
 |   | [283 Move Zeroes](./src/main/java/org/sean/array/ZeroesMover.java) |
 |   | [540. Single Element in a Sorted Array](./src/main/java/org/sean/array/SingleElemFinder.java) |
 |   | [33. Search in Rotated Sorted Array](./src/main/java/org/sean/array/ArraySearch.java) |
 |   | [819. Most Common Word](./src/main/java/org/sean/array/CommonWordsCounter.java) |
 |   | [565. Array Nesting](./src/main/java/org/sean/array/NestingArray.java) |
 |   | [3. Longest Substring Without Repeating Characters](./src/main/java/org/sean/array/LongestSubstrFinder.java) |
+|   | [1743. Restore the Array From Adjacent Pairs](./src/main/java/org/sean/array/AdjacentPairsToArray.java) |
 |   | [120. Triangle](./src/main/java/org/sean/array/Triangle.java) |
 |   | [981. Time Based Key-Value Store](./src/main/java/org/sean/array/TimeMap.java) |
 |   | [118. Pascal's Triangle](./src/main/java/org/sean/array/PascalTriangle.java) |
@@ -39,6 +41,7 @@
 |   | [146. LRU Cache](./src/main/java/org/sean/array/LRUCache.java) |
 |   | [128. Longest Consecutive Sequence](./src/main/java/org/sean/array/ConsecutiveSequenceFinder.java) |
 |   | [215. Kth Largest Element in an Array](./src/main/java/org/sean/array/KthLargestFinder.java) |
+|   | [986. Interval List Intersections](./src/main/java/org/sean/array/ListIntersection.java) |
 |   | [17. Letter Combinations of a Phone Number](./src/main/java/org/sean/array/LetterCombinationFinder.java) |
 |   | [680. Valid Palindrome II](./src/main/java/org/sean/array/PalindromeValidator.java) |
 |   | [733. Flood Fill](./src/main/java/org/sean/array/ImageFloodFill.java) |
@@ -47,11 +50,14 @@
 |   | [200. Number of Islands](./src/main/java/org/sean/array/IslandCounter.java) |
 |   | [973. K Closest Points to Origin](./src/main/java/org/sean/array/KClosestPoints.java) |
 |   | [724. Find Pivot Index](./src/main/java/org/sean/array/PivotFinder.java) |
+|   | [93. Restore IP Addresses](./src/main/java/org/sean/array/IpChecker.java) |
+|   | [448. Find All Numbers Disappeared in an Array](./src/main/java/org/sean/array/ElementFinder.java) |
 |   | [1046. Last Stone Weight](./src/main/java/org/sean/array/StoneWeightResolver.java) |
 |   | [436. Find Right Interval](./src/main/java/org/sean/array/RightIntervalFinder.java) |
 |   | [442. Find All Duplicates in an Array](./src/main/java/org/sean/array/DuplicatesFinder.java) |
 |   | [904 Fruit into baskets](./src/main/java/org/sean/array/FruitCounter.java) |
 |   | [347. Top K Frequent Elements](./src/main/java/org/sean/array/FrequentElemFinder.java) |
+|   | [2070. Most Beautiful Item for Each Query](./src/main/java/org/sean/array/MaxBeautyCounter.java) |
 |   | [240. Search a 2D Matrix II](./src/main/java/org/sean/array/MatrixSearcher2.java) |
 |   | [130. Surrounded Regions](./src/main/java/org/sean/array/RegionDetector.java) |
 |   | [27. Remove Element](./src/main/java/org/sean/array/ElementRemoval.java) |
@@ -60,10 +66,19 @@
 | Linkedlist | [2. Add Two Numbers](./src/main/java/org/sean/linkedlist/NumAdder.java) |
 |   | [86. Partition List](./src/main/java/org/sean/linkedlist/ListPartition.java) |
 | Backtracking | [463. Island Perimeter](./src/main/java/org/sean/backtracking/IslandPerimeterCalculator.java) |
+|   | [78. Subsets](./src/main/java/org/sean/backtracking/Subsets.java) |
+|   | [140. Word Break II](./src/main/java/org/sean/backtracking/WordBreakII.java) |
+|   | [77. Combinations](./src/main/java/org/sean/backtracking/Combinations.java) |
 |   | [51. N-Queens](./src/main/java/org/sean/backtracking/NQueens.java) |
+|   | [301. Remove Invalid Parentheses](./src/main/java/org/sean/backtracking/ParenthesesEditor.java) |
+|   | [494. Target Sum](./src/main/java/org/sean/backtracking/TargetSum.java) |
 |   | [79. Word Search](./src/main/java/org/sean/backtracking/WordSearcher.java) |
+|   | [332. Reconstruct Itinerary](./src/main/java/org/sean/backtracking/ItineraryBuilder.java) |
 | Graph | [207. Course Schedule](./src/main/java/org/sean/graph/CourseSchedule.java) |
 | Recursive | [62. Unique Paths](./src/main/java/org/sean/recursive/UniquePaths.java) |
+|   | [695. Max Area of Island](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
+|   | [1. Mark all the visited cells](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
+|   | [2. Traverse the cells with value 1 recursively, and calculate](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
 |   | [124. Binary Tree Maximum Path Sum](./src/main/java/org/sean/recursive/MaxPathCalculator.java) |
 |   | [1448. Count Good Nodes in Binary Tree](./src/main/java/org/sean/recursive/GoodNodeCounter.java) |
 |   | [437. Path Sum III](./src/main/java/org/sean/recursive/PathSumCounter.java) |
