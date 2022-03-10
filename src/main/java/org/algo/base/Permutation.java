@@ -1,4 +1,4 @@
-package org.sean.backtracking;
+package org.algo.base;
 
 /**
  * Created by Sean on 6/4/17.
