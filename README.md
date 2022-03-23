@@ -26,6 +26,7 @@
 |   | [925. Long Pressed Name](./src/main/java/org/sean/array/LongPressedName.java) |
 |   | [1833. Maximum Ice Cream Bars](./src/main/java/org/sean/array/IceCreamCounter.java) |
 |   | [1079. Letter Tile Possibilities](./src/main/java/org/sean/array/LetterTile.java) |
+|   | [827. Making A Large Island](./src/main/java/org/sean/array/LargeIsland.java) |
 |   | [283 Move Zeroes](./src/main/java/org/sean/array/ZeroesMover.java) |
 |   | [540. Single Element in a Sorted Array](./src/main/java/org/sean/array/SingleElemFinder.java) |
 |   | [33. Search in Rotated Sorted Array](./src/main/java/org/sean/array/ArraySearch.java) |
@@ -61,6 +62,7 @@
 |   | [240. Search a 2D Matrix II](./src/main/java/org/sean/array/MatrixSearcher2.java) |
 |   | [130. Surrounded Regions](./src/main/java/org/sean/array/RegionDetector.java) |
 |   | [27. Remove Element](./src/main/java/org/sean/array/ElementRemoval.java) |
+|   | [84. Largest Rectangle in Histogram](./src/main/java/org/sean/array/LargestRectangleFinder.java) |
 |   | [12. Integer to Roman](./src/main/java/org/sean/array/IntRomanConverter.java) |
 |   | [41. First Missing Positive](./src/main/java/org/sean/array/MissingPositiveFinder.java) |
 | Linkedlist | [2. Add Two Numbers](./src/main/java/org/sean/linkedlist/NumAdder.java) |
@@ -93,6 +95,7 @@
 | Trie | [211. Add and Search Word - Data structure design](./src/main/java/org/sean/trie/Trie.java) |
 | Sorting | [451. Sort Characters By Frequency](./src/main/java/org/sean/sorting/FrequencySort.java) |
 |   | [791. Custom Sort String](./src/main/java/org/sean/sorting/CustomSort.java) |
+| Queue | [622. Design Circular Queue](./src/main/java/org/sean/queue/MyCircularQueue.java) |
 | String | [459. Repeated Substring Pattern](./src/main/java/org/sean/string/RepeatedSubstrFinder.java) |
 |   | [763. Partition Labels](./src/main/java/org/sean/string/LabelPartition.java) |
 |   | [890. Find and Replace Pattern](./src/main/java/org/sean/string/PatternFinder.java) |
