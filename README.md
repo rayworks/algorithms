@@ -67,6 +67,7 @@
 |   | [41. First Missing Positive](./src/main/java/org/sean/array/MissingPositiveFinder.java) |
 | Linkedlist | [2. Add Two Numbers](./src/main/java/org/sean/linkedlist/NumAdder.java) |
 |   | [86. Partition List](./src/main/java/org/sean/linkedlist/ListPartition.java) |
+|   | [1019. Next Greater Node In Linked List](./src/main/java/org/sean/linkedlist/NextGreaterNode.java) |
 | Backtracking | [463. Island Perimeter](./src/main/java/org/sean/backtracking/IslandPerimeterCalculator.java) |
 |   | [78. Subsets](./src/main/java/org/sean/backtracking/Subsets.java) |
 |   | [140. Word Break II](./src/main/java/org/sean/backtracking/WordBreakII.java) |
