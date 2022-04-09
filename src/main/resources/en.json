@@ -1,0 +1,9 @@
+{
+  "welcome": "\uD83D\uDC4F Welcome to Tactic Games \uD83C\uDFAE，Please enter the player who started first (O/X) : ",
+  "input_tips": "Please enter the row and column on the board for player %s ",
+  "invalid_input": "The input is invalid, please re-enter the row and column :",
+  "cell_occupied": "The entered position is occupied",
+  "your_input": "The location you entered is : (Row %d, Column %d)\n",
+  "result_winner": "\uD83C\uDFAE Game over，✌️ The winner is player %c",
+  "result_draw": "\uD83C\uDFAE Game over，both sides played to a draw"
+}

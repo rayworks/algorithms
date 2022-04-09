@@ -1,0 +1,9 @@
+{
+  "welcome": "\uD83D\uDC4F 欢迎来到 Tactic 游戏 \uD83C\uDFAE，请输入先开始的玩家Player (O/X) : ",
+  "input_tips": "请玩家 %s 输入棋盘上的行数，列数 2个数字: ",
+  "invalid_input": "输入无效，请重新输入行数，列数:",
+  "cell_occupied": "输入的位置已被占用，不能再放置其它棋子",
+  "your_input": "您输入的是 : (%d 排, %d 列)\n",
+  "result_winner": "\uD83C\uDFAE 游戏结束，✌️ 获胜方是️ %c",
+  "result_draw": "\uD83C\uDFAE 游戏结束，双方打成平局"
+}
