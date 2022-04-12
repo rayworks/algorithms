@@ -60,10 +60,12 @@
 |   | [347. Top K Frequent Elements](./src/main/java/org/sean/array/FrequentElemFinder.java) |
 |   | [2070. Most Beautiful Item for Each Query](./src/main/java/org/sean/array/MaxBeautyCounter.java) |
 |   | [240. Search a 2D Matrix II](./src/main/java/org/sean/array/MatrixSearcher2.java) |
+|   | [524. Longest Word in Dictionary through Deleting](./src/main/java/org/sean/array/LongestWordFinder.java) |
 |   | [130. Surrounded Regions](./src/main/java/org/sean/array/RegionDetector.java) |
 |   | [27. Remove Element](./src/main/java/org/sean/array/ElementRemoval.java) |
 |   | [84. Largest Rectangle in Histogram](./src/main/java/org/sean/array/LargestRectangleFinder.java) |
 |   | [12. Integer to Roman](./src/main/java/org/sean/array/IntRomanConverter.java) |
+|   | [289. Game of Life](./src/main/java/org/sean/array/LifeGame.java) |
 |   | [41. First Missing Positive](./src/main/java/org/sean/array/MissingPositiveFinder.java) |
 | Linkedlist | [2. Add Two Numbers](./src/main/java/org/sean/linkedlist/NumAdder.java) |
 |   | [86. Partition List](./src/main/java/org/sean/linkedlist/ListPartition.java) |
