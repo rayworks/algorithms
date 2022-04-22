@@ -1,31 +1,17 @@
-package org.sean.dynamicpro;
+package org.sean.backtracking;
 
 import java.util.*;
 
-/** * 40. Combination Sum II */
-public class CombinationSum2 {
-    List<Set<List<Integer>>> caches = new ArrayList<>();
+/***
+ * 39. Combination Sum
+ */
+public class CombinationSum {
+    List<Set<List<Integer>>> caches = new ArrayList<>(); // dp[]
 
-    // The original valid element table
-    private int[] table;
-
-    private int[] tmp;
-
-    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    // Solution 1 :
+    public List<List<Integer>> combinationSum0(int[] candidates, int target) {
         if (candidates == null || candidates.length == 0 || target == 0)
             return Collections.emptyList();
-
-        int len = candidates.length;
-
-        table = new int[target + 1];
-        for (int i = 0; i < len; i++) {
-            int elem = candidates[i];
-            if (elem <= target) {
-                table[elem] += 1;
-            }
-        }
-
-        tmp = new int[target + 1];
 
         caches = new ArrayList<>(target + 1);
         caches.add(Collections.emptySet());
@@ -59,10 +45,6 @@ public class CombinationSum2 {
                     List<Integer> matchedOut = new ArrayList<>(set);
                     matchedOut.add(candidate);
 
-                    // check for a group of limited elements
-                    boolean result = limitReached(matchedOut);
-                    if (result) continue;
-
                     // !!n*lg(n)
                     Collections.sort(matchedOut);
 
@@ -72,20 +54,29 @@ public class CombinationSum2 {
         }
     }
 
-    private boolean limitReached(List<Integer> matchedOut) {
-        Arrays.fill(tmp, 0);
 
-        for (Integer i : matchedOut) {
-            tmp[i] += 1;
+    // Solution 2 : DFS
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        search(candidates, target, 0, new LinkedList<>());
+        return out;
+    }
+
+    private List<List<Integer>> out = new ArrayList<>();
+
+    private void search(int[] candidates, int target, int pos, LinkedList<Integer> path) {
+
+        if (target < 0)
+            return;
+
+        if (target == 0) {
+            out.add(new ArrayList<>(path));
+            return;
         }
 
-        int last = tmp.length - 1;
-        for (int p = 0; p <= last; p++) {
-            if (tmp[p] > table[p]) {
-                return true;
-            }
+        for (int i = pos; i < candidates.length; i++) {
+            path.add(candidates[i]);
+            search(candidates, target - candidates[i], i, path);
+            path.removeLast();
         }
-
-        return false;
     }
 }

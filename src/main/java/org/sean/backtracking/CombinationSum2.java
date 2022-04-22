@@ -1,17 +1,31 @@
-package org.sean.dynamicpro;
+package org.sean.backtracking;
 
 import java.util.*;
 
-/***
- * 39. Combination Sum
- */
-public class CombinationSum {
-    List<Set<List<Integer>>> caches = new ArrayList<>(); // dp[]
+/** * 40. Combination Sum II */
+public class CombinationSum2 {
+    List<Set<List<Integer>>> caches = new ArrayList<>();
 
-    // Solution 1 :
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    // The original valid element table
+    private int[] table;
+
+    private int[] tmp;
+
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         if (candidates == null || candidates.length == 0 || target == 0)
             return Collections.emptyList();
+
+        int len = candidates.length;
+
+        table = new int[target + 1];
+        for (int i = 0; i < len; i++) {
+            int elem = candidates[i];
+            if (elem <= target) {
+                table[elem] += 1;
+            }
+        }
+
+        tmp = new int[target + 1];
 
         caches = new ArrayList<>(target + 1);
         caches.add(Collections.emptySet());
@@ -45,6 +59,10 @@ public class CombinationSum {
                     List<Integer> matchedOut = new ArrayList<>(set);
                     matchedOut.add(candidate);
 
+                    // check for a group of limited elements
+                    boolean result = limitReached(matchedOut);
+                    if (result) continue;
+
                     // !!n*lg(n)
                     Collections.sort(matchedOut);
 
@@ -52,5 +70,22 @@ public class CombinationSum {
                 }
             }
         }
+    }
+
+    private boolean limitReached(List<Integer> matchedOut) {
+        Arrays.fill(tmp, 0);
+
+        for (Integer i : matchedOut) {
+            tmp[i] += 1;
+        }
+
+        int last = tmp.length - 1;
+        for (int p = 0; p <= last; p++) {
+            if (tmp[p] > table[p]) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -1,4 +1,4 @@
-package org.sean.dynamicpro;
+package org.sean.backtracking;
 
 import java.util.*;
 import java.util.stream.Collectors;
