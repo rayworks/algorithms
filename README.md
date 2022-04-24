@@ -22,6 +22,7 @@
 |   | [107. Binary Tree Level Order Traversal II](./src/main/java/org/sean/tree/LevelTraversalSolution.java) |
 |   | [951 Flip Equivalent Binary Trees](./src/main/java/org/sean/tree/FlipEquivalentTree.java) |
 |   | [617. Merge Two Binary Trees](./src/main/java/org/sean/tree/TreeMerger.java) |
+| Design | [1396. Design Underground System](./src/main/java/org/sean/design/UndergroundSystem.java) |
 | Array | [22. Generate Parentheses](./src/main/java/org/sean/array/ParenthesesGenerator.java) |
 |   | [703. Kth Largest Element in a Stream](./src/main/java/org/sean/array/KthStreamLargest.java) |
 |   | [925. Long Pressed Name](./src/main/java/org/sean/array/LongPressedName.java) |
@@ -71,7 +72,8 @@
 | Linkedlist | [2. Add Two Numbers](./src/main/java/org/sean/linkedlist/NumAdder.java) |
 |   | [86. Partition List](./src/main/java/org/sean/linkedlist/ListPartition.java) |
 |   | [1019. Next Greater Node In Linked List](./src/main/java/org/sean/linkedlist/NextGreaterNode.java) |
-| Backtracking | [463. Island Perimeter](./src/main/java/org/sean/backtracking/IslandPerimeterCalculator.java) |
+| Backtracking | [542. 01 Matrix](./src/main/java/org/sean/backtracking/MatrixMinDistFinder.java) |
+|   | [463. Island Perimeter](./src/main/java/org/sean/backtracking/IslandPerimeterCalculator.java) |
 |   | [78. Subsets](./src/main/java/org/sean/backtracking/Subsets.java) |
 |   | [140. Word Break II](./src/main/java/org/sean/backtracking/WordBreakII.java) |
 |   | [77. Combinations](./src/main/java/org/sean/backtracking/Combinations.java) |
