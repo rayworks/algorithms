@@ -77,6 +77,8 @@
 |   | [78. Subsets](./src/main/java/org/sean/backtracking/Subsets.java) |
 |   | [140. Word Break II](./src/main/java/org/sean/backtracking/WordBreakII.java) |
 |   | [77. Combinations](./src/main/java/org/sean/backtracking/Combinations.java) |
+|   | [1631. Path With Minimum Effort](./src/main/java/org/sean/backtracking/MinEffortPathFinder.java) |
+|   | [842. Split Array into Fibonacci Sequence](./src/main/java/org/sean/backtracking/FibonacciArraySplitter.java) |
 |   | [51. N-Queens](./src/main/java/org/sean/backtracking/NQueens.java) |
 |   | [301. Remove Invalid Parentheses](./src/main/java/org/sean/backtracking/ParenthesesEditor.java) |
 |   | [494. Target Sum](./src/main/java/org/sean/backtracking/TargetSum.java) |
@@ -85,7 +87,11 @@
 |   | [216. Combination Sum III](./src/main/java/org/sean/backtracking/CombinationSum3.java) |
 |   | [332. Reconstruct Itinerary](./src/main/java/org/sean/backtracking/ItineraryBuilder.java) |
 |   | [40. Combination Sum II](./src/main/java/org/sean/backtracking/CombinationSum2.java) |
-| Graph | [207. Course Schedule](./src/main/java/org/sean/graph/CourseSchedule.java) |
+|   | [698. Partition to K Equal Sum Subsets](./src/main/java/org/sean/backtracking/SubsetPartition.java) |
+| Graph | [1202. Smallest String With Swaps](./src/main/java/org/sean/graph/SmallStrWithSwaps.java) |
+|   | [785. Is Graph Bipartite](./src/main/java/org/sean/graph/BipartiteChecker.java) |
+|   | [1584. Min Cost to Connect All Points](./src/main/java/org/sean/graph/PointMinCost.java) |
+|   | [207. Course Schedule](./src/main/java/org/sean/graph/CourseSchedule.java) |
 | Recursive | [62. Unique Paths](./src/main/java/org/sean/recursive/UniquePaths.java) |
 |   | [695. Max Area of Island](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
 |   | [1. Mark all the visited cells](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
