@@ -108,7 +108,7 @@ public class TicTacToe {
         printBoard();
     }
 
-    private static int[] retrieveInputRowCol(Scanner scanner) {
+    public static int[] retrieveInputRowCol(Scanner scanner) {
         String row = scanner.next();
         String col = scanner.next();
         int r;
@@ -172,7 +172,7 @@ public class TicTacToe {
         }
     }
 
-    private static Map<String, String> applyTranslations(String[] args) throws FileNotFoundException {
+    public static Map<String, String> applyTranslations(String[] args) throws FileNotFoundException {
         String fileName = "zh_cn.json";
         if (args.length > 0) {
             String language = args[0];

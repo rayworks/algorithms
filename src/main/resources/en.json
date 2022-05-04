@@ -5,5 +5,10 @@
   "cell_occupied": "The entered position is occupied",
   "your_input": "The location you entered is : (Row %d, Column %d)\n",
   "result_winner": "\uD83C\uDFAE Game over，✌️ The winner is player %c",
-  "result_draw": "\uD83C\uDFAE Game over，both sides played to a draw"
+  "result_draw": "\uD83C\uDFAE Game over，both sides played to a draw",
+  "welcome_challenge": "\uD83D\uDC4F Welcome to Tactic Challenge Games \uD83C\uDFAE，Please enter the player who started first (1 for Human, 2 for Computer) :",
+  "computer_placed": "Computer placed : ",
+  "input_now": "It's your turn, please input the row (1-3) and column (1-3) :",
+  "you_win": "\uD83C\uDFAE You win!",
+  "computer_win": "\uD83C\uDFAE Computer wins!"
 }

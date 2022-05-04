@@ -5,5 +5,10 @@
   "cell_occupied": "输入的位置已被占用，不能再放置其它棋子",
   "your_input": "您输入的是 : (%d 排, %d 列)\n",
   "result_winner": "\uD83C\uDFAE 游戏结束，✌️ 获胜方是️ %c",
-  "result_draw": "\uD83C\uDFAE 游戏结束，双方打成平局"
+  "result_draw": "\uD83C\uDFAE 游戏结束，双方打成平局",
+  "welcome_challenge": "\uD83D\uDC4F 欢迎来到 Tactic 挑战游戏 \uD83C\uDFAE，请输入先开始的玩家 (1 人类选手/ 2 电脑) :",
+  "computer_placed": "电脑已经下了棋子: ",
+  "input_now": "轮到您了，请输入行（1-3）和列（1-3）：",
+  "you_win": "\uD83C\uDFAE 您赢了!",
+  "computer_win": "\uD83C\uDFAE 电脑赢了!"
 }
