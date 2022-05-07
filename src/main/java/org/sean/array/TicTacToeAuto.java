@@ -21,15 +21,15 @@ public class TicTacToeAuto {
 
     // all the possible winning lines
     private static final int[][] lineIdxTable =
-            new int[][] {
-                {0, 1, 2}, // horizontal lines
-                {3, 4, 5},
-                {6, 7, 8},
-                {0, 3, 6}, // vertical lines
-                {1, 4, 7},
-                {2, 5, 8},
-                {0, 4, 8}, // cross
-                {2, 4, 6},
+            new int[][]{
+                    {0, 1, 2}, // horizontal lines
+                    {3, 4, 5},
+                    {6, 7, 8},
+                    {0, 3, 6}, // vertical lines
+                    {1, 4, 7},
+                    {2, 5, 8},
+                    {0, 4, 8}, // cross
+                    {2, 4, 6},
             };
 
     public static class MoveInfo {
@@ -131,13 +131,14 @@ public class TicTacToeAuto {
     }
 
     /***
-     *  Recursive method to find best move for computer.
-     *  MoveInfo.move returns a number from 1-9 indicating square.
+     *  Recursive method to find best move for computer while performing alpha-beta pruning.
      *  Possible evaluations satisfy COMP_LOSS < DRAW < COMP_WIN.
      *
-     * @return The next {@link MoveInfo} for computer
+     *  The main routine should make the call with alpha = COMP_LOSS and beta = COMP_WIN.
+     *
+     * @return The next {@link MoveInfo} for computer. <code>MoveInfo.move </code>returns a number from 1-9 indicating square.
      */
-    public MoveInfo findCompMove() {
+    public MoveInfo findCompMove(int alpha, int beta) {
         int i, responseValue;
         int value, bestMove = 1;
         MoveInfo quickWinInfo;
@@ -145,11 +146,11 @@ public class TicTacToeAuto {
         if (fullBoard()) value = DRAW;
         else if ((quickWinInfo = immediateWin(chessComp)) != null) return quickWinInfo;
         else {
-            value = COMP_LOSS;
-            for (i = 0; i < 9; i++) {
+            value = alpha;
+            for (i = 0; i < 9 && value < beta; i++) {
                 if (isEmpty(i)) {
                     place(i, COMP);
-                    responseValue = findHumanMove().value;
+                    responseValue = findHumanMove(value, beta).value;
                     unplace(i); // Restore board
 
                     if (responseValue > value) {
@@ -163,7 +164,7 @@ public class TicTacToeAuto {
         return new MoveInfo(bestMove, value);
     }
 
-    private MoveInfo findHumanMove() {
+    private MoveInfo findHumanMove(int alpha, int beta) {
         int i, responseValue;
         int value, bestMove = 1;
         MoveInfo quickWinInfo;
@@ -171,11 +172,11 @@ public class TicTacToeAuto {
         if (fullBoard()) value = DRAW;
         else if ((quickWinInfo = immediateWin(chessHuman)) != null) return quickWinInfo;
         else {
-            value = COMP_WIN;
-            for (i = 0; i < 9; i++) {
+            value = beta;
+            for (i = 0; i < 9 && value > alpha; i++) {
                 if (isEmpty(i)) {
                     place(i, HUMAN);
-                    responseValue = findCompMove().value;
+                    responseValue = findCompMove(alpha, value).value;
                     unplace(i);
 
                     if (responseValue < value) {
@@ -202,7 +203,7 @@ public class TicTacToeAuto {
 
         for (int i = 0; !(auto.fullBoard()); i++) {
             if (isCompTurn) {
-                MoveInfo compMove = auto.findCompMove();
+                MoveInfo compMove = auto.findCompMove(COMP_LOSS, COMP_WIN);
                 int cord = compMove.move;
                 System.out.printf(
                         trans.get("computer_placed") + "[%d, %d]%n", cord / 3 + 1, cord % 3 + 1);
