@@ -10,7 +10,7 @@ public class CombinationSum3 {
     List<Set<List<Integer>>> caches;
 
     // k numbers that add up to a number n
-    public List<List<Integer>> combinationSum3(int k, int n) {
+    public List<List<Integer>> combinationSum30(int k, int n) {
         int[] candidates = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
         int maxSum = 0;
         for (int i : candidates) {
@@ -66,9 +66,52 @@ public class CombinationSum3 {
         }
     }
 
-    public static void main(String[] args) {
-        CombinationSum3 sum3 = new CombinationSum3();
-        List<List<Integer>> lists = sum3.combinationSum3(3, 7);
-        System.out.println(Arrays.toString(lists.toArray()));
+    // region DFS
+    private int[] nums;
+    boolean[] used;
+    List<List<Integer>> out = new ArrayList<>();
+
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        nums = new int[9];
+        used = new boolean[nums.length + 1]; // [0-9]
+        for (int i = 0; i < 9; i++) {
+            nums[i] = i + 1;
+        }
+
+        int sum = Arrays.stream(nums).sum();
+        if (n > sum || n < 1)
+            return Collections.emptyList();
+
+        search(nums, 0, n, k, new ArrayList<>());
+
+        return out;
     }
+
+
+    private void search(int[] nums, int pos, int targetSum, int k, List<Integer> curr) {
+        if (0 == targetSum && curr.size() == k) {
+            out.add(new ArrayList<>(curr));
+            return;
+        }
+        if (targetSum < 0)
+            return;
+
+        if (pos >= nums.length || curr.size() > k)
+            return;
+
+        for (int i = pos; i < nums.length; i++) {
+            int elem = nums[i];
+            if (used[elem])
+                continue;
+
+            curr.add(elem);
+            used[elem] = true;
+
+            search(nums, i + 1, targetSum - elem, k, curr);
+
+            curr.remove(curr.size() - 1);
+            used[elem] = false;
+        }
+    }
+    // endregion
 }
