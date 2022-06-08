@@ -106,7 +106,7 @@ public class NQueens {
         return list;
     }
 
-    public List<List<String>> solveNQueens(int n) {
+    public List<List<String>> solveNQueens0(int n) {
         if (n == 1) {
             List<List<String>> lists = new ArrayList<>();
             lists.add(Arrays.asList("Q"));
@@ -131,4 +131,58 @@ public class NQueens {
 
         return new ArrayList<>(results);
     }
+
+    // region backtracking
+    List<List<Integer>> out = new ArrayList<>();
+    private void placeNQueue(int n, List<Integer> positions) {
+        if (positions.size() == n) {
+            out.add(new ArrayList<>(positions));
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (isValidPos(n, i, positions)) {
+                positions.add(i);
+                placeNQueue(n, positions);
+                positions.remove(positions.size() - 1);
+            }
+        }
+    }
+
+    private boolean isValidPos(int n, int row, List<Integer> positions) {
+
+        int next = positions.size();
+        for (int i = 0; i < positions.size(); i++) {
+            int pos = positions.get(i);
+            if (pos == row)
+                return false;
+
+            if (next - i == pos - row || next - i == row - pos) // check diagonals
+                return false;
+        }
+
+        return true;
+    }
+
+    public List<List<String>> solveNQueens(int n) {
+        out.clear();
+
+        placeNQueue(n, new ArrayList<>());
+
+        List<List<String>> ret = new ArrayList<>();
+        for (List<Integer> places : out) {
+            ArrayList<String> list = new ArrayList<>();
+
+            for (int p : places) {
+                char[] arr = new char[n];
+                Arrays.fill(arr, '.');
+                arr[p]  = 'Q';
+                list.add(new String(arr));
+            }
+
+            ret.add(list);
+        }
+        return ret;
+    }
+    // endregion
 }
