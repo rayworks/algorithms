@@ -22,18 +22,18 @@ import java.util.*;
 //
 public class CardIssuer {
     // region solution 2 : Using Trie to retrieve the prefix efficiently
-    private Trie trie;
+    private TrieEx trieEx;
 
     Map<String, String> prefixCard = new HashMap<>();
     Map<String, List<Integer>> cardLengths = new HashMap<>();
 
     private void init() {
-        trie = new Trie();
+        trieEx = new TrieEx();
 
-        trie.addWord("34");
-        trie.addWord("37");
-        trie.addWord("38");
-        trie.addWord("39");
+        trieEx.addWord("34");
+        trieEx.addWord("37");
+        trieEx.addWord("38");
+        trieEx.addWord("39");
         String[] strAmex = {"34", "37"};
         String[] strDiners = {"38", "39"};
 
@@ -42,35 +42,35 @@ public class CardIssuer {
         Arrays.stream(strAmex).forEach(s -> prefixCard.put(s, "Amex"));
         Arrays.stream(strDiners).forEach(s -> prefixCard.put(s, "Diners"));
 
-        trie.addWord("4");
+        trieEx.addWord("4");
         prefixCard.put("4", "Visa");
         cardLengths.put("Visa", Arrays.asList(13, 16, 19));
 
         for (int i = 51; i < 56; i++) {
             String s = String.valueOf(i);
-            trie.addWord(s);
+            trieEx.addWord(s);
             prefixCard.put(s, "MasterCard");
         }
         cardLengths.put("MasterCard", Arrays.asList(16));
 
-        trie.addWord("6011");
+        trieEx.addWord("6011");
         prefixCard.put("6011", "Discover");
         for (int j = 622126; j <= 622925; j++) {
-            trie.addWord(String.valueOf(j));
+            trieEx.addWord(String.valueOf(j));
             prefixCard.put(String.valueOf(j), "Discover");
         }
         for (int k = 644; k < 650; k++) {
-            trie.addWord(String.valueOf(k));
+            trieEx.addWord(String.valueOf(k));
             prefixCard.put(String.valueOf(k), "Discover");
         }
-        trie.addWord("65");
+        trieEx.addWord("65");
         prefixCard.put("65", "Discover");
         cardLengths.put("Discover", Arrays.asList(16, 19));
 
-        trie.addWord("50");
+        trieEx.addWord("50");
         prefixCard.put("50", "Maestro");
         for (int i = 56; i <= 69; i++) {
-            trie.addWord(String.valueOf(i));
+            trieEx.addWord(String.valueOf(i));
             prefixCard.put(String.valueOf(i), "Maestro");
         }
         cardLengths.put("Maestro", Arrays.asList(12, 13, 14, 15, 16, 17, 18, 19));
@@ -83,7 +83,7 @@ public class CardIssuer {
 
         StringBuilder builder = new StringBuilder();
         List<String> matchedPrefixes = new ArrayList<>();
-        trie.lookupPrefix(builder, matchedPrefixes, cardNumber, 0);
+        trieEx.lookupPrefix(builder, matchedPrefixes, cardNumber, 0);
         if (matchedPrefixes.isEmpty()) return null;
 
         String longestPrefix = builder.toString();

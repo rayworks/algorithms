@@ -1,6 +1,6 @@
 package org.sean.tree;
 
-import org.sean.trie.Trie;
+import org.sean.trie.TrieEx;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -41,7 +41,7 @@ public class HuffmanCodec {
     private final Map<String, Character> decodecMap = new HashMap<>();
     private Node root = null;
 
-    private Trie trie;
+    private TrieEx trieEx;
 
     private void buildTree(String raw) {
         pq.clear();
@@ -139,15 +139,15 @@ public class HuffmanCodec {
 
 
     private void buildTrie() {
-        trie = new Trie();
+        trieEx = new TrieEx();
 
         for (String code : decodecMap.keySet()) {
-            trie.addWord(code);
+            trieEx.addWord(code);
         }
     }
 
     private boolean encodedStrFound(String encoded) {
-        return trie.search(encoded);
+        return trieEx.search(encoded);
     }
 
     private void buildCodecMap(Set<Character> chars) {
