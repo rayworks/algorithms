@@ -13,6 +13,7 @@
 |   | [110. Balanced Binary Tree](./src/main/java/org/sean/tree/BalancedBinaryTree.java) |
 |   | [127. Word Ladder](./src/main/java/org/sean/tree/WordLadder.java) |
 |   | [297. Serialize and Deserialize Binary Tree](./src/main/java/org/sean/tree/TreeSerializer.java) |
+|   | [543. Diameter of Binary Tree](./src/main/java/org/sean/tree/Diameter.java) |
 |   | [1609. Even Odd Tree](./src/main/java/org/sean/tree/EvenOddTree.java) |
 |   | [662. Maximum Width of Binary Tree](./src/main/java/org/sean/tree/MaxWidthBinaryTree.java) |
 |   | [814. Binary Tree Pruning](./src/main/java/org/sean/tree/BinaryTreePruner.java) |
@@ -89,9 +90,11 @@
 |   | [40. Combination Sum II](./src/main/java/org/sean/backtracking/CombinationSum2.java) |
 |   | [698. Partition to K Equal Sum Subsets](./src/main/java/org/sean/backtracking/SubsetPartition.java) |
 | Graph | [1202. Smallest String With Swaps](./src/main/java/org/sean/graph/SmallStrWithSwaps.java) |
+|   | [743. Network Delay Time](./src/main/java/org/sean/graph/NetworkDelayTime.java) |
 |   | [785. Is Graph Bipartite](./src/main/java/org/sean/graph/BipartiteChecker.java) |
 |   | [1584. Min Cost to Connect All Points](./src/main/java/org/sean/graph/PointMinCost.java) |
 |   | [207. Course Schedule](./src/main/java/org/sean/graph/CourseSchedule.java) |
+|   | [329. Longest Increasing Path in a Matrix](./src/main/java/org/sean/graph/LongestIncPathFinder.java) |
 | Recursive | [62. Unique Paths](./src/main/java/org/sean/recursive/UniquePaths.java) |
 |   | [695. Max Area of Island](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
 |   | [1. Mark all the visited cells](./src/main/java/org/sean/recursive/IslandMaxArea.java) |
@@ -107,7 +110,10 @@
 |   | [113. Path Sum II](./src/main/java/org/sean/recursive/RootLeafSumPathFinder.java) |
 | Concurrency | [1114. Print in Order](./src/main/java/org/sean/concurrency/OrderPrinter.java) |
 |   | [1115 Print FooBar Alternately](./src/main/java/org/sean/concurrency/FooBar.java) |
-| Trie | [211. Add and Search Word - Data structure design](./src/main/java/org/sean/trie/Trie.java) |
+| Trie | [211. Add and Search Word - Data structure design](./src/main/java/org/sean/trie/TrieEx.java) |
+|   | [1268. Search Suggestions System](./src/main/java/org/sean/trie/SearchHelper.java) |
+|   | [745. Prefix and Suffix Search](./src/main/java/org/sean/trie/WordFilter.java) |
+|   | [208. Implement Trie](./src/main/java/org/sean/trie/Trie.java) |
 | Sorting | [451. Sort Characters By Frequency](./src/main/java/org/sean/sorting/FrequencySort.java) |
 |   | [791. Custom Sort String](./src/main/java/org/sean/sorting/CustomSort.java) |
 | Queue | [622. Design Circular Queue](./src/main/java/org/sean/queue/MyCircularQueue.java) |
@@ -118,7 +124,9 @@
 |   | [139. Word Break](./src/main/java/org/sean/dynamicpro/WordBreak.java) |
 |   | [392. Is Subsequence](./src/main/java/org/sean/dynamicpro/SubsequenceChecker.java) |
 |   | [300. Longest Increasing Subsequence](./src/main/java/org/sean/dynamicpro/Lis.java) |
+|   | [474. Ones and Zeroes](./src/main/java/org/sean/dynamicpro/OnesAndZeroes.java) |
 |   | [322. Coin Change](./src/main/java/org/sean/dynamicpro/CoinExchanger.java) |
 | Stack | [394. Decode String](./src/main/java/org/sean/stack/StringDecoder.java) |
 |   | [844. Backspace String Compare](./src/main/java/org/sean/stack/BackspaceStr.java) |
 |   | [20. Valid Parentheses](./src/main/java/org/sean/stack/ParenthesesValidator.java) |
+|   | [225. Implement Stack using Queues](./src/main/java/org/sean/stack/MyStack.java) |
