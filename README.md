@@ -9,6 +9,7 @@
 |   | [199. Binary Tree Right Side View](./src/main/java/org/sean/tree/BinaryTreeRightSide.java) |
 |   | [669. Trim a Binary Search Tree](./src/main/java/org/sean/tree/BinarySearchTreeTrimmer.java) |
 |   | [450. Delete Node in a BST](./src/main/java/org/sean/tree/BinarySearchTreeTrimmer.java) |
+|   | [687. Longest Univalue Path](./src/main/java/org/sean/tree/LongestUnivaluePath.java) |
 |   | [103. Binary Tree Zigzag Level Order Traversal](./src/main/java/org/sean/tree/ZigzagTraversal.java) |
 |   | [110. Balanced Binary Tree](./src/main/java/org/sean/tree/BalancedBinaryTree.java) |
 |   | [127. Word Ladder](./src/main/java/org/sean/tree/WordLadder.java) |
@@ -52,6 +53,7 @@
 |   | [49. Group Anagrams](./src/main/java/org/sean/array/AnagramSorter.java) |
 |   | [42. Trapping Rain Water](./src/main/java/org/sean/array/WaterBar.java) |
 |   | [200. Number of Islands](./src/main/java/org/sean/array/IslandCounter.java) |
+|   | [1423. Maximum Points You Can Obtain from Cards](./src/main/java/org/sean/array/MaxCardPoints.java) |
 |   | [973. K Closest Points to Origin](./src/main/java/org/sean/array/KClosestPoints.java) |
 |   | [724. Find Pivot Index](./src/main/java/org/sean/array/PivotFinder.java) |
 |   | [93. Restore IP Addresses](./src/main/java/org/sean/array/IpChecker.java) |
@@ -79,6 +81,7 @@
 |   | [140. Word Break II](./src/main/java/org/sean/backtracking/WordBreakII.java) |
 |   | [77. Combinations](./src/main/java/org/sean/backtracking/Combinations.java) |
 |   | [1631. Path With Minimum Effort](./src/main/java/org/sean/backtracking/MinEffortPathFinder.java) |
+|   | [473. Matchsticks to Square](./src/main/java/org/sean/backtracking/StickSquare.kt) |
 |   | [842. Split Array into Fibonacci Sequence](./src/main/java/org/sean/backtracking/FibonacciArraySplitter.java) |
 |   | [51. N-Queens](./src/main/java/org/sean/backtracking/NQueens.java) |
 |   | [301. Remove Invalid Parentheses](./src/main/java/org/sean/backtracking/ParenthesesEditor.java) |
@@ -113,8 +116,11 @@
 | Trie | [211. Add and Search Word - Data structure design](./src/main/java/org/sean/trie/TrieEx.java) |
 |   | [1268. Search Suggestions System](./src/main/java/org/sean/trie/SearchHelper.java) |
 |   | [745. Prefix and Suffix Search](./src/main/java/org/sean/trie/WordFilter.java) |
+|   | [720. Longest Word in Dictionary](./src/main/java/org/sean/trie/LongestWord.java) |
 |   | [208. Implement Trie](./src/main/java/org/sean/trie/Trie.java) |
-| Sorting | [451. Sort Characters By Frequency](./src/main/java/org/sean/sorting/FrequencySort.java) |
+| Greedy | [1642. Furthest Building You Can Reach](./src/main/java/org/sean/greedy/BuildingClimber.java) |
+| Sorting | [462. Minimum Moves to Equal Array Elements II](./src/main/java/org/sean/sorting/MinMoveCalculator.java) |
+|   | [451. Sort Characters By Frequency](./src/main/java/org/sean/sorting/FrequencySort.java) |
 |   | [791. Custom Sort String](./src/main/java/org/sean/sorting/CustomSort.java) |
 | Queue | [622. Design Circular Queue](./src/main/java/org/sean/queue/MyCircularQueue.java) |
 | String | [459. Repeated Substring Pattern](./src/main/java/org/sean/string/RepeatedSubstrFinder.java) |
@@ -122,7 +128,9 @@
 |   | [890. Find and Replace Pattern](./src/main/java/org/sean/string/PatternFinder.java) |
 | Dynamicpro | [1048. Longest String Chain](./src/main/java/org/sean/dynamicpro/LongestStringChain.java) |
 |   | [139. Word Break](./src/main/java/org/sean/dynamicpro/WordBreak.java) |
+|   | [823. Binary Trees With Factors](./src/main/java/org/sean/dynamicpro/FactoredBinaryTree.java) |
 |   | [392. Is Subsequence](./src/main/java/org/sean/dynamicpro/SubsequenceChecker.java) |
+|   | [377. Combination Sum IV](./src/main/java/org/sean/dynamicpro/CombinationSum4.java) |
 |   | [300. Longest Increasing Subsequence](./src/main/java/org/sean/dynamicpro/Lis.java) |
 |   | [474. Ones and Zeroes](./src/main/java/org/sean/dynamicpro/OnesAndZeroes.java) |
 |   | [322. Coin Change](./src/main/java/org/sean/dynamicpro/CoinExchanger.java) |
