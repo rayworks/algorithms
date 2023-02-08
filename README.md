@@ -25,6 +25,7 @@
 |   | [951 Flip Equivalent Binary Trees](./src/main/java/org/sean/tree/FlipEquivalentTree.java) |
 |   | [617. Merge Two Binary Trees](./src/main/java/org/sean/tree/TreeMerger.java) |
 | Design | [1396. Design Underground System](./src/main/java/org/sean/design/UndergroundSystem.java) |
+|   | [460. LFU](./src/main/java/org/sean/design/LFUCache.java) |
 | Array | [22. Generate Parentheses](./src/main/java/org/sean/array/ParenthesesGenerator.java) |
 |   | [703. Kth Largest Element in a Stream](./src/main/java/org/sean/array/KthStreamLargest.java) |
 |   | [925. Long Pressed Name](./src/main/java/org/sean/array/LongPressedName.java) |
@@ -44,6 +45,8 @@
 |   | [56. Merge Intervals](./src/main/java/org/sean/array/IntervalMerger.java) |
 |   | [239. Sliding Window Maximum](./src/main/java/org/sean/array/SlidingWindowMax.java) |
 |   | [146. LRU Cache](./src/main/java/org/sean/array/LRUCache.java) |
+|   | [2007. Find Original Array From Doubled Array](./src/main/java/org/sean/array/ArrayFinder.java) |
+|   | [45. Jump Game II](./src/main/java/org/sean/array/JumpGame2.java) |
 |   | [128. Longest Consecutive Sequence](./src/main/java/org/sean/array/ConsecutiveSequenceFinder.java) |
 |   | [215. Kth Largest Element in an Array](./src/main/java/org/sean/array/KthLargestFinder.java) |
 |   | [986. Interval List Intersections](./src/main/java/org/sean/array/ListIntersection.java) |
@@ -84,6 +87,7 @@
 |   | [473. Matchsticks to Square](./src/main/java/org/sean/backtracking/StickSquare.kt) |
 |   | [842. Split Array into Fibonacci Sequence](./src/main/java/org/sean/backtracking/FibonacciArraySplitter.java) |
 |   | [51. N-Queens](./src/main/java/org/sean/backtracking/NQueens.java) |
+|   | [980. Unique Paths III](./src/main/java/org/sean/backtracking/UniquePaths3.java) |
 |   | [301. Remove Invalid Parentheses](./src/main/java/org/sean/backtracking/ParenthesesEditor.java) |
 |   | [494. Target Sum](./src/main/java/org/sean/backtracking/TargetSum.java) |
 |   | [39. Combination Sum](./src/main/java/org/sean/backtracking/CombinationSum.java) |
@@ -93,9 +97,11 @@
 |   | [40. Combination Sum II](./src/main/java/org/sean/backtracking/CombinationSum2.java) |
 |   | [698. Partition to K Equal Sum Subsets](./src/main/java/org/sean/backtracking/SubsetPartition.java) |
 | Graph | [1202. Smallest String With Swaps](./src/main/java/org/sean/graph/SmallStrWithSwaps.java) |
+|   | [417. Pacific Atlantic Water Flow](./src/main/java/org/sean/graph/OceanWaterFlow.java) |
 |   | [743. Network Delay Time](./src/main/java/org/sean/graph/NetworkDelayTime.java) |
 |   | [785. Is Graph Bipartite](./src/main/java/org/sean/graph/BipartiteChecker.java) |
 |   | [1584. Min Cost to Connect All Points](./src/main/java/org/sean/graph/PointMinCost.java) |
+|   | [787. Cheapest Flights Within K Stops](./src/main/java/org/sean/graph/CheapestFlightsFinder.java) |
 |   | [207. Course Schedule](./src/main/java/org/sean/graph/CourseSchedule.java) |
 |   | [329. Longest Increasing Path in a Matrix](./src/main/java/org/sean/graph/LongestIncPathFinder.java) |
 | Recursive | [62. Unique Paths](./src/main/java/org/sean/recursive/UniquePaths.java) |
@@ -126,7 +132,8 @@
 | String | [459. Repeated Substring Pattern](./src/main/java/org/sean/string/RepeatedSubstrFinder.java) |
 |   | [763. Partition Labels](./src/main/java/org/sean/string/LabelPartition.java) |
 |   | [890. Find and Replace Pattern](./src/main/java/org/sean/string/PatternFinder.java) |
-| Dynamicpro | [1048. Longest String Chain](./src/main/java/org/sean/dynamicpro/LongestStringChain.java) |
+| Dynamicpro | [279. Perfect Squares](./src/main/java/org/sean/dynamicpro/PerfectSquares.java) |
+|   | [1048. Longest String Chain](./src/main/java/org/sean/dynamicpro/LongestStringChain.java) |
 |   | [139. Word Break](./src/main/java/org/sean/dynamicpro/WordBreak.java) |
 |   | [823. Binary Trees With Factors](./src/main/java/org/sean/dynamicpro/FactoredBinaryTree.java) |
 |   | [392. Is Subsequence](./src/main/java/org/sean/dynamicpro/SubsequenceChecker.java) |
@@ -134,7 +141,10 @@
 |   | [300. Longest Increasing Subsequence](./src/main/java/org/sean/dynamicpro/Lis.java) |
 |   | [474. Ones and Zeroes](./src/main/java/org/sean/dynamicpro/OnesAndZeroes.java) |
 |   | [322. Coin Change](./src/main/java/org/sean/dynamicpro/CoinExchanger.java) |
-| Stack | [394. Decode String](./src/main/java/org/sean/stack/StringDecoder.java) |
+| Stack | [224. Basic Calculator](./src/main/java/org/sean/stack/BasicCalculator.java) |
+|   | [739. Daily Temperatures](./src/main/java/org/sean/stack/DailyTemp.java) |
+|   | [394. Decode String](./src/main/java/org/sean/stack/StringDecoder.java) |
+|   | [71. Simplify Path](./src/main/java/org/sean/stack/PathHelper.java) |
 |   | [844. Backspace String Compare](./src/main/java/org/sean/stack/BackspaceStr.java) |
 |   | [20. Valid Parentheses](./src/main/java/org/sean/stack/ParenthesesValidator.java) |
 |   | [225. Implement Stack using Queues](./src/main/java/org/sean/stack/MyStack.java) |
