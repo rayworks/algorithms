@@ -7,6 +7,7 @@
 | Base | [53. Maximum Subarray](./src/main/java/org/algo/base/MaxSubSum.java) |
 | Tree | [235. Lowest Common Ancestor of a Binary Search Tree](./src/main/java/org/sean/tree/Lca.java) |
 |   | [199. Binary Tree Right Side View](./src/main/java/org/sean/tree/BinaryTreeRightSide.java) |
+|   | [99. Recover Binary Search Tree](./src/main/java/org/sean/tree/BSTRestorer.java) |
 |   | [669. Trim a Binary Search Tree](./src/main/java/org/sean/tree/BinarySearchTreeTrimmer.java) |
 |   | [450. Delete Node in a BST](./src/main/java/org/sean/tree/BinarySearchTreeTrimmer.java) |
 |   | [687. Longest Univalue Path](./src/main/java/org/sean/tree/LongestUnivaluePath.java) |
@@ -21,6 +22,7 @@
 |   | [1325. Delete Leaves With a Given Value](./src/main/java/org/sean/tree/NodeCleaner.java) |
 |   | [637. Average of Levels in Binary Tree](./src/main/java/org/sean/tree/AvgLevelResolver.java) |
 |   | [116. Populating Next Right Pointers in Each Node](./src/main/java/org/sean/tree/RightPointerBuilder.java) |
+|   | [2477. Minimum Fuel Cost to Report to the Capital](./src/main/java/org/sean/tree/FuelCost.java) |
 |   | [107. Binary Tree Level Order Traversal II](./src/main/java/org/sean/tree/LevelTraversalSolution.java) |
 |   | [951 Flip Equivalent Binary Trees](./src/main/java/org/sean/tree/FlipEquivalentTree.java) |
 |   | [617. Merge Two Binary Trees](./src/main/java/org/sean/tree/TreeMerger.java) |
