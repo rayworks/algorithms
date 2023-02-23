@@ -119,14 +119,17 @@
 |   | [112. Path Sum](./src/main/java/org/sean/recursive/RootLeafPathFinder.java) |
 |   | [129. Sum Root to Leaf Numbers](./src/main/java/org/sean/recursive/RootLeafPathCalculator.java) |
 |   | [113. Path Sum II](./src/main/java/org/sean/recursive/RootLeafSumPathFinder.java) |
+| Search | [1011. Capacity To Ship Packages Within D Days](./src/main/java/org/sean/search/PackageShip.java) |
 | Concurrency | [1114. Print in Order](./src/main/java/org/sean/concurrency/OrderPrinter.java) |
 |   | [1115 Print FooBar Alternately](./src/main/java/org/sean/concurrency/FooBar.java) |
+| Divide_conquer | [218. The Skyline Problem](./src/main/java/org/sean/divide_conquer/SkyLinePainter.java) |
 | Trie | [211. Add and Search Word - Data structure design](./src/main/java/org/sean/trie/TrieEx.java) |
 |   | [1268. Search Suggestions System](./src/main/java/org/sean/trie/SearchHelper.java) |
 |   | [745. Prefix and Suffix Search](./src/main/java/org/sean/trie/WordFilter.java) |
 |   | [720. Longest Word in Dictionary](./src/main/java/org/sean/trie/LongestWord.java) |
 |   | [208. Implement Trie](./src/main/java/org/sean/trie/Trie.java) |
 | Greedy | [1642. Furthest Building You Can Reach](./src/main/java/org/sean/greedy/BuildingClimber.java) |
+|   | [502. IPO](./src/main/java/org/sean/greedy/IPO.java) |
 | Sorting | [462. Minimum Moves to Equal Array Elements II](./src/main/java/org/sean/sorting/MinMoveCalculator.java) |
 |   | [451. Sort Characters By Frequency](./src/main/java/org/sean/sorting/FrequencySort.java) |
 |   | [791. Custom Sort String](./src/main/java/org/sean/sorting/CustomSort.java) |
