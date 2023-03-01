@@ -1,14 +1,8 @@
 package org.sean.sorting;
 
-public class QSort {
+import java.util.Random;
 
-    public void print(int[] a) {
-        for (int i : a) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n");
-    }
+public class QSort {
 
     private void swap(int[] a, int m, int n) {
         int tmp = a[m];
@@ -17,52 +11,47 @@ public class QSort {
     }
 
     private int partition(int[] a, int lhv, int rhv) {
-        int l = lhv;
+        // randomizing the pivot
+        final int randIndex = new Random().nextInt(rhv - lhv + 1) + lhv;
+        swap(a, randIndex, lhv);
+        int p = a[lhv];
+
+        int l = lhv + 1;
         int r = rhv;
 
-        int p = a[l];
-        ++l;
-        while (l < r) {
-            for (; l < rhv; l++) { // rhv, lhv, note the original boundary when searching
+        while (true) {
+            for (; l < r; l++) {
                 if (a[l] > p)
                     break;
             }
 
-            for (; r > lhv; r--) {
+            for (; l < r; r--) {
                 if (a[r] < p) {
                     break;
                 }
             }
 
-            if (l < r) {
-                swap(a, l, r);
-            }
+            if (l >= r) break;
+
+            swap(a, l, r);
         }
 
-        System.out.print("- ");
-        swap(a, lhv, r);
+        // put pivot at the right position
+        int pivotPos = a[l] < a[lhv] ? l : l - 1;
+        swap(a, lhv, pivotPos);
 
-        print(a);
-
-        return r;
+        return pivotPos;
     }
 
-    public void sort(int[] a, int i, int j) {
+    private void doSort(int[] a, int i, int j) {
         if (i >= j) return;
 
         int pos = partition(a, i, j);
-        sort(a, i, pos - 1);
-        sort(a, pos + 1, j);
+        doSort(a, i, pos - 1);
+        doSort(a, pos + 1, j);
     }
 
-    public static void main(String[] args) {
-        int[] array = new int[]{3, 6, 1, 7, 9, 0, 5};
-        QSort qSort = new QSort();
-        qSort.print(array);
-
-        System.out.println("===============================");
-
-        qSort.sort(array, 0, array.length - 1);
-        qSort.print(array);
+    public void sort(int[] a) {
+        doSort(a, 0, a.length - 1);
     }
 }
