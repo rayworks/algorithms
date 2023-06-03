@@ -1,17 +1,77 @@
 package org.sean.array;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /***
  * 436. Find Right Interval
  */
 public class RightIntervalFinder {
+    // region Solution2
+    static class Elem implements Comparable<Elem>{
+        public Elem(int[] pair, int pos) {
+            this.pair = pair;
+            this.pos = pos;
+        }
+
+        int[] pair;
+        int pos;
+
+        @Override
+        public int compareTo( Elem o) {
+            return Integer.compare(this.pair[0], o.pair[0]);
+        }
+    }
+
+    public int[] findRightInterval(int[][] intervals) { // O(N*lgN)
+        List<Elem> elems = new ArrayList<>();
+        for (int i = 0; i < intervals.length; i++) {
+            elems.add(new Elem(intervals[i], i));
+        }
+
+        Collections.sort(elems);
+
+        int pos = 0;
+        int[] res = new int[intervals.length];
+        for (int[] interval: intervals) {
+            res[pos++] = locateRightPos(interval, elems);
+        }
+
+        return res;
+    }
+
+    // low_bound()
+    private int locateRightPos(int[] pair, List<Elem> intervals) {
+        // end <= start'
+        int left = 0;
+        int right = intervals.size() - 1;
+
+        int target = pair[1];
+        int mid;
+        while (left <= right) {
+            mid = left + (right - left) / 2;
+            int val = intervals.get(mid).pair[0];
+
+            if(val == target) {
+                return intervals.get(mid).pos;
+            } else if (val < target) {
+                left = mid + 1;
+            } else { // >
+                right = mid - 1;
+            }
+        }
+
+        if (left >= intervals.size())
+            return -1;
+
+        if (right < 0)
+            return -1;
+
+        return intervals.get(left).pos;
+    }
+    // endregion
     Map<Integer, Integer> startValIndexMap = new HashMap<>();
 
-    public int[] findRightInterval(int[][] intervals) {
+    public int[] findRightInterval0(int[][] intervals) {
         if (intervals == null || intervals.length <= 1) {
             return new int[] {-1};
         }

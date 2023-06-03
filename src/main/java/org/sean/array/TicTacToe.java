@@ -4,6 +4,8 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 /***
@@ -172,7 +174,7 @@ public class TicTacToe {
         }
     }
 
-    public static Map<String, String> applyTranslations(String[] args) throws FileNotFoundException {
+    public static Map<String, String> applyTranslations(String[] args) throws IOException {
         String fileName = "zh_cn.json";
         if (args.length > 0) {
             String language = args[0];
@@ -185,7 +187,7 @@ public class TicTacToe {
 
         InputStreamReader reader = null;
         try {
-            reader = new InputStreamReader(new FileInputStream("src/main/resources/" + fileName));
+            reader = new InputStreamReader(Files.newInputStream(Paths.get("src/main/resources/" + fileName)));
             Map<String, String> trans = new Gson().fromJson(reader, new TypeToken<Map<String, String>>() {
             }.getType());
             return trans;

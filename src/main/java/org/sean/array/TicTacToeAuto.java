@@ -1,12 +1,15 @@
 package org.sean.array;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
 
+/***
+ * TicTac : Human VS. Computer
+ */
 public class TicTacToeAuto {
     public static final int COMP_LOSS = -1;
     public static final int DRAW = 0;
@@ -190,7 +193,7 @@ public class TicTacToeAuto {
         return new MoveInfo(bestMove, value);
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         Map<String, String> trans = TicTacToe.applyTranslations(args);
 
         Scanner scanner = new Scanner(System.in);
