@@ -23,6 +23,7 @@
 |   | [637. Average of Levels in Binary Tree](./src/main/java/org/sean/tree/AvgLevelResolver.java) |
 |   | [116. Populating Next Right Pointers in Each Node](./src/main/java/org/sean/tree/RightPointerBuilder.java) |
 |   | [2477. Minimum Fuel Cost to Report to the Capital](./src/main/java/org/sean/tree/FuelCost.java) |
+|   | [1376. Time Needed to Inform All Employees](./src/main/java/org/sean/tree/InformTime.java) |
 |   | [107. Binary Tree Level Order Traversal II](./src/main/java/org/sean/tree/LevelTraversalSolution.java) |
 |   | [951 Flip Equivalent Binary Trees](./src/main/java/org/sean/tree/FlipEquivalentTree.java) |
 |   | [617. Merge Two Binary Trees](./src/main/java/org/sean/tree/TreeMerger.java) |
@@ -32,6 +33,7 @@
 |   | [703. Kth Largest Element in a Stream](./src/main/java/org/sean/array/KthStreamLargest.java) |
 |   | [925. Long Pressed Name](./src/main/java/org/sean/array/LongPressedName.java) |
 |   | [1833. Maximum Ice Cream Bars](./src/main/java/org/sean/array/IceCreamCounter.java) |
+|   | [2653. Sliding Subarray Beauty](./src/main/java/org/sean/array/SlidingSubarrayBeauty.java) |
 |   | [1079. Letter Tile Possibilities](./src/main/java/org/sean/array/LetterTile.java) |
 |   | [827. Making A Large Island](./src/main/java/org/sean/array/LargeIsland.java) |
 |   | [283 Move Zeroes](./src/main/java/org/sean/array/ZeroesMover.java) |
@@ -45,7 +47,9 @@
 |   | [981. Time Based Key-Value Store](./src/main/java/org/sean/array/TimeMap.java) |
 |   | [118. Pascal's Triangle](./src/main/java/org/sean/array/PascalTriangle.java) |
 |   | [56. Merge Intervals](./src/main/java/org/sean/array/IntervalMerger.java) |
+|   | [881. Boats to Save People](./src/main/java/org/sean/array/BoatCounter.java) |
 |   | [239. Sliding Window Maximum](./src/main/java/org/sean/array/SlidingWindowMax.java) |
+|   | [304. Range Sum Query 2D - Immutable](./src/main/java/org/sean/array/NumMatrix.java) |
 |   | [146. LRU Cache](./src/main/java/org/sean/array/LRUCache.java) |
 |   | [2007. Find Original Array From Doubled Array](./src/main/java/org/sean/array/ArrayFinder.java) |
 |   | [45. Jump Game II](./src/main/java/org/sean/array/JumpGame2.java) |
@@ -101,6 +105,7 @@
 | Graph | [1202. Smallest String With Swaps](./src/main/java/org/sean/graph/SmallStrWithSwaps.java) |
 |   | [417. Pacific Atlantic Water Flow](./src/main/java/org/sean/graph/OceanWaterFlow.java) |
 |   | [743. Network Delay Time](./src/main/java/org/sean/graph/NetworkDelayTime.java) |
+|   | [2101. Detonate the Maximum Bombs](./src/main/java/org/sean/graph/MaxBombs.java) |
 |   | [785. Is Graph Bipartite](./src/main/java/org/sean/graph/BipartiteChecker.java) |
 |   | [1584. Min Cost to Connect All Points](./src/main/java/org/sean/graph/PointMinCost.java) |
 |   | [787. Cheapest Flights Within K Stops](./src/main/java/org/sean/graph/CheapestFlightsFinder.java) |
@@ -140,6 +145,7 @@
 | Dynamicpro | [279. Perfect Squares](./src/main/java/org/sean/dynamicpro/PerfectSquares.java) |
 |   | [1048. Longest String Chain](./src/main/java/org/sean/dynamicpro/LongestStringChain.java) |
 |   | [139. Word Break](./src/main/java/org/sean/dynamicpro/WordBreak.java) |
+|   | [1416. Restore The Array](./src/main/java/org/sean/dynamicpro/IntArray.java) |
 |   | [823. Binary Trees With Factors](./src/main/java/org/sean/dynamicpro/FactoredBinaryTree.java) |
 |   | [392. Is Subsequence](./src/main/java/org/sean/dynamicpro/SubsequenceChecker.java) |
 |   | [377. Combination Sum IV](./src/main/java/org/sean/dynamicpro/CombinationSum4.java) |
