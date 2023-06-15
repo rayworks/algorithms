@@ -27,7 +27,8 @@
 |   | [107. Binary Tree Level Order Traversal II](./src/main/java/org/sean/tree/LevelTraversalSolution.java) |
 |   | [951 Flip Equivalent Binary Trees](./src/main/java/org/sean/tree/FlipEquivalentTree.java) |
 |   | [617. Merge Two Binary Trees](./src/main/java/org/sean/tree/TreeMerger.java) |
-| Design | [1396. Design Underground System](./src/main/java/org/sean/design/UndergroundSystem.java) |
+| Design | [1146. Snapshot Array](./src/main/java/org/sean/design/SnapshotArray.java) |
+|   | [1396. Design Underground System](./src/main/java/org/sean/design/UndergroundSystem.java) |
 |   | [460. LFU](./src/main/java/org/sean/design/LFUCache.java) |
 | Array | [22. Generate Parentheses](./src/main/java/org/sean/array/ParenthesesGenerator.java) |
 |   | [703. Kth Largest Element in a Stream](./src/main/java/org/sean/array/KthStreamLargest.java) |
@@ -125,6 +126,7 @@
 |   | [129. Sum Root to Leaf Numbers](./src/main/java/org/sean/recursive/RootLeafPathCalculator.java) |
 |   | [113. Path Sum II](./src/main/java/org/sean/recursive/RootLeafSumPathFinder.java) |
 | Search | [1011. Capacity To Ship Packages Within D Days](./src/main/java/org/sean/search/PackageShip.java) |
+|   | [1802. Maximum Value at a Given Index in a Bounded Array](./src/main/java/org/sean/search/BoundedArray.java) |
 | Concurrency | [1114. Print in Order](./src/main/java/org/sean/concurrency/OrderPrinter.java) |
 |   | [1115 Print FooBar Alternately](./src/main/java/org/sean/concurrency/FooBar.java) |
 | Divide_conquer | [218. The Skyline Problem](./src/main/java/org/sean/divide_conquer/SkyLinePainter.java) |
