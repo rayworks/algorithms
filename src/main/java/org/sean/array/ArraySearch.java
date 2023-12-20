@@ -4,6 +4,43 @@ package org.sean.array;
  * 33. Search in Rotated Sorted Array
  */
 public class ArraySearch {
+    public int searchExt(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            // check two ends
+            if (nums[left] == target) return left;
+            if (nums[right] == target) return right;
+
+            // eg:
+            //4567012
+            //5670124
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > nums[left]) { // if it's already sorted in the left half
+                if (nums[mid] > target && nums[left] < target) { // check the target position in sorted range
+                    right = mid - 1;
+                    left++;
+                } else {
+                    left = mid + 1;
+                }
+            } else {
+                // else right half is sorted
+                if (nums[mid] < target && nums[right] > target) {
+                    left = mid + 1;
+                    right--;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+
     // region Time O(logN)
     private int doBinSearch(int[] nums, int l, int r, int target) {
         while (l <= r) {
