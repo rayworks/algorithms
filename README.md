@@ -13,6 +13,7 @@
 |   | [687. Longest Univalue Path](./src/main/java/org/sean/tree/LongestUnivaluePath.java) |
 |   | [103. Binary Tree Zigzag Level Order Traversal](./src/main/java/org/sean/tree/ZigzagTraversal.java) |
 |   | [110. Balanced Binary Tree](./src/main/java/org/sean/tree/BalancedBinaryTree.java) |
+|   | [1361. Validate Binary Tree Nodes](./src/main/java/org/sean/tree/BinaryTreeValidator.java) |
 |   | [127. Word Ladder](./src/main/java/org/sean/tree/WordLadder.java) |
 |   | [297. Serialize and Deserialize Binary Tree](./src/main/java/org/sean/tree/TreeSerializer.java) |
 |   | [543. Diameter of Binary Tree](./src/main/java/org/sean/tree/Diameter.java) |
@@ -66,6 +67,7 @@
 |   | [1423. Maximum Points You Can Obtain from Cards](./src/main/java/org/sean/array/MaxCardPoints.java) |
 |   | [973. K Closest Points to Origin](./src/main/java/org/sean/array/KClosestPoints.java) |
 |   | [724. Find Pivot Index](./src/main/java/org/sean/array/PivotFinder.java) |
+|   | [438. Find All Anagrams in a String](./src/main/java/org/sean/array/AnagramFinder.java) |
 |   | [93. Restore IP Addresses](./src/main/java/org/sean/array/IpChecker.java) |
 |   | [448. Find All Numbers Disappeared in an Array](./src/main/java/org/sean/array/ElementFinder.java) |
 |   | [1046. Last Stone Weight](./src/main/java/org/sean/array/StoneWeightResolver.java) |
@@ -104,9 +106,11 @@
 |   | [40. Combination Sum II](./src/main/java/org/sean/backtracking/CombinationSum2.java) |
 |   | [698. Partition to K Equal Sum Subsets](./src/main/java/org/sean/backtracking/SubsetPartition.java) |
 | Graph | [1202. Smallest String With Swaps](./src/main/java/org/sean/graph/SmallStrWithSwaps.java) |
+|   | [847. Shortest Path Visiting All Nodes](./src/main/java/org/sean/graph/ShortestPathFinder.java) |
 |   | [417. Pacific Atlantic Water Flow](./src/main/java/org/sean/graph/OceanWaterFlow.java) |
 |   | [743. Network Delay Time](./src/main/java/org/sean/graph/NetworkDelayTime.java) |
 |   | [2101. Detonate the Maximum Bombs](./src/main/java/org/sean/graph/MaxBombs.java) |
+|   | [721. Accounts Merge](./src/main/java/org/sean/graph/AccountMerger.java) |
 |   | [785. Is Graph Bipartite](./src/main/java/org/sean/graph/BipartiteChecker.java) |
 |   | [1584. Min Cost to Connect All Points](./src/main/java/org/sean/graph/PointMinCost.java) |
 |   | [787. Cheapest Flights Within K Stops](./src/main/java/org/sean/graph/CheapestFlightsFinder.java) |
@@ -127,6 +131,7 @@
 |   | [113. Path Sum II](./src/main/java/org/sean/recursive/RootLeafSumPathFinder.java) |
 | Search | [1011. Capacity To Ship Packages Within D Days](./src/main/java/org/sean/search/PackageShip.java) |
 |   | [1802. Maximum Value at a Given Index in a Bounded Array](./src/main/java/org/sean/search/BoundedArray.java) |
+|   | [2616. Minimize the Maximum Difference of Pairs](./src/main/java/org/sean/search/MinPairsDiff.java) |
 | Concurrency | [1114. Print in Order](./src/main/java/org/sean/concurrency/OrderPrinter.java) |
 |   | [1115 Print FooBar Alternately](./src/main/java/org/sean/concurrency/FooBar.java) |
 | Divide_conquer | [218. The Skyline Problem](./src/main/java/org/sean/divide_conquer/SkyLinePainter.java) |
@@ -136,6 +141,7 @@
 |   | [720. Longest Word in Dictionary](./src/main/java/org/sean/trie/LongestWord.java) |
 |   | [208. Implement Trie](./src/main/java/org/sean/trie/Trie.java) |
 | Greedy | [1642. Furthest Building You Can Reach](./src/main/java/org/sean/greedy/BuildingClimber.java) |
+|   | [68. Text Justification](./src/main/java/org/sean/greedy/TextJustification.java) |
 |   | [502. IPO](./src/main/java/org/sean/greedy/IPO.java) |
 | Sorting | [462. Minimum Moves to Equal Array Elements II](./src/main/java/org/sean/sorting/MinMoveCalculator.java) |
 |   | [451. Sort Characters By Frequency](./src/main/java/org/sean/sorting/FrequencySort.java) |
@@ -147,9 +153,11 @@
 | Dynamicpro | [279. Perfect Squares](./src/main/java/org/sean/dynamicpro/PerfectSquares.java) |
 |   | [1048. Longest String Chain](./src/main/java/org/sean/dynamicpro/LongestStringChain.java) |
 |   | [139. Word Break](./src/main/java/org/sean/dynamicpro/WordBreak.java) |
+|   | [2707. Extra Characters in a String](./src/main/java/org/sean/dynamicpro/CharExtractor.java) |
 |   | [1416. Restore The Array](./src/main/java/org/sean/dynamicpro/IntArray.java) |
 |   | [823. Binary Trees With Factors](./src/main/java/org/sean/dynamicpro/FactoredBinaryTree.java) |
 |   | [392. Is Subsequence](./src/main/java/org/sean/dynamicpro/SubsequenceChecker.java) |
+|   | [1359. Count All Valid Pickup and Delivery Options](./src/main/java/org/sean/dynamicpro/OrderCounter.java) |
 |   | [377. Combination Sum IV](./src/main/java/org/sean/dynamicpro/CombinationSum4.java) |
 |   | [300. Longest Increasing Subsequence](./src/main/java/org/sean/dynamicpro/Lis.java) |
 |   | [474. Ones and Zeroes](./src/main/java/org/sean/dynamicpro/OnesAndZeroes.java) |
