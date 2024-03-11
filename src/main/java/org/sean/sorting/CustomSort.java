@@ -1,51 +1,38 @@
 package org.sean.sorting;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
-
 // 791. Custom Sort String
 public class CustomSort {
-    public String customSortString(String order, String str) {
-        if (order == null || order.isEmpty() || str == null || str.isEmpty()) return str;
+    public String customSortString(String order, String s) {
+        if (s.length() == 1)
+            return s;
 
-        // Index mapping
-        int[] positions = new int['z' - 'a' + 1];
-        Arrays.fill(positions, -1);
+        int[] charCnt = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            charCnt[s.charAt(i) - 'a'] += 1;
+        }
 
-        Map<Integer, Character> posCharMap = new HashMap<>();
-        int orderLen = order.length();
-        for (int i = 0; i < orderLen; i++) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < order.length(); i++) {
             char ch = order.charAt(i);
-            positions[ch - 'a'] = i;
+            int cnt = charCnt[ch - 'a'];
+            if (cnt > 0) {
+                for (int j = 0; j < cnt; j++) {
+                    builder.append(ch);
+                }
 
-            posCharMap.put(i, ch);
+                charCnt[ch - 'a'] = 0;
+            }
         }
-
-        // <Pos, count>
-        TreeMap<Integer, Integer> map = new TreeMap<>();
-        StringBuilder sorted = new StringBuilder();
-        StringBuilder rest = new StringBuilder();
-        int len = str.length();
-        for (int j = 0; j < len; j++) {
-            char c = str.charAt(j);
-            int position = positions[c - 'a'];
-            if (position < 0) {
-                rest.append(c);
-            } else {
-                if (map.containsKey(position)) map.put(position, map.get(position) + 1);
-                else map.put(position, 1);
+        for (int i = 0; i < charCnt.length; i++) {
+            char ch = (char) ('a' + i);
+            int cnt = charCnt[i];
+            if (cnt > 0) {
+                for (int j = 0; j < cnt; j++) {
+                    builder.append(ch);
+                }
             }
         }
 
-        for (int pos : map.keySet()) {
-            int cnt = map.get(pos);
-            char ch = posCharMap.get(pos);
-            for (int i = 0; i < cnt; i++) {
-                sorted.append(ch);
-            }
-        }
-        return sorted + rest.toString();
+        return builder.toString();
     }
 }
