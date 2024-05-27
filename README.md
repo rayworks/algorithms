@@ -37,7 +37,7 @@
 |   | [1833. Maximum Ice Cream Bars](./src/main/java/org/sean/array/IceCreamCounter.java) |
 |   | [2653. Sliding Subarray Beauty](./src/main/java/org/sean/array/SlidingSubarrayBeauty.java) |
 |   | [1079. Letter Tile Possibilities](./src/main/java/org/sean/array/LetterTile.java) |
-|   | [827. Making A Large Island](./src/main/java/org/sean/array/LargeIsland.java) |
+|   | [31. Next Permutation](./src/main/java/org/sean/array/NextPermutation.java) |
 |   | [283 Move Zeroes](./src/main/java/org/sean/array/ZeroesMover.java) |
 |   | [540. Single Element in a Sorted Array](./src/main/java/org/sean/array/SingleElemFinder.java) |
 |   | [33. Search in Rotated Sorted Array](./src/main/java/org/sean/array/ArraySearch.java) |
@@ -66,6 +66,7 @@
 |   | [200. Number of Islands](./src/main/java/org/sean/array/IslandCounter.java) |
 |   | [1423. Maximum Points You Can Obtain from Cards](./src/main/java/org/sean/array/MaxCardPoints.java) |
 |   | [973. K Closest Points to Origin](./src/main/java/org/sean/array/KClosestPoints.java) |
+|   | [1608. Special Array With X Elements Greater Than or Equal X](./src/main/java/org/sean/array/NumInSpecialArray.java) |
 |   | [724. Find Pivot Index](./src/main/java/org/sean/array/PivotFinder.java) |
 |   | [438. Find All Anagrams in a String](./src/main/java/org/sean/array/AnagramFinder.java) |
 |   | [93. Restore IP Addresses](./src/main/java/org/sean/array/IpChecker.java) |
@@ -81,6 +82,7 @@
 |   | [130. Surrounded Regions](./src/main/java/org/sean/array/RegionDetector.java) |
 |   | [27. Remove Element](./src/main/java/org/sean/array/ElementRemoval.java) |
 |   | [84. Largest Rectangle in Histogram](./src/main/java/org/sean/array/LargestRectangleFinder.java) |
+|   | [678. Valid Parenthesis String](./src/main/java/org/sean/array/ParenthesisValidator.java) |
 |   | [12. Integer to Roman](./src/main/java/org/sean/array/IntRomanConverter.java) |
 |   | [289. Game of Life](./src/main/java/org/sean/array/LifeGame.java) |
 |   | [41. First Missing Positive](./src/main/java/org/sean/array/MissingPositiveFinder.java) |
@@ -88,7 +90,6 @@
 |   | [86. Partition List](./src/main/java/org/sean/linkedlist/ListPartition.java) |
 |   | [1019. Next Greater Node In Linked List](./src/main/java/org/sean/linkedlist/NextGreaterNode.java) |
 | Backtracking | [542. 01 Matrix](./src/main/java/org/sean/backtracking/MatrixMinDistFinder.java) |
-|   | [463. Island Perimeter](./src/main/java/org/sean/backtracking/IslandPerimeterCalculator.java) |
 |   | [78. Subsets](./src/main/java/org/sean/backtracking/Subsets.java) |
 |   | [140. Word Break II](./src/main/java/org/sean/backtracking/WordBreakII.java) |
 |   | [77. Combinations](./src/main/java/org/sean/backtracking/Combinations.java) |
@@ -108,7 +109,9 @@
 | Graph | [1202. Smallest String With Swaps](./src/main/java/org/sean/graph/SmallStrWithSwaps.java) |
 |   | [847. Shortest Path Visiting All Nodes](./src/main/java/org/sean/graph/ShortestPathFinder.java) |
 |   | [417. Pacific Atlantic Water Flow](./src/main/java/org/sean/graph/OceanWaterFlow.java) |
+|   | [463. Island Perimeter](./src/main/java/org/sean/graph/IslandPerimeterCalculator.java) |
 |   | [743. Network Delay Time](./src/main/java/org/sean/graph/NetworkDelayTime.java) |
+|   | [827. Making A Large Island](./src/main/java/org/sean/graph/LargeIsland.java) |
 |   | [2101. Detonate the Maximum Bombs](./src/main/java/org/sean/graph/MaxBombs.java) |
 |   | [721. Accounts Merge](./src/main/java/org/sean/graph/AccountMerger.java) |
 |   | [785. Is Graph Bipartite](./src/main/java/org/sean/graph/BipartiteChecker.java) |
@@ -131,6 +134,7 @@
 |   | [113. Path Sum II](./src/main/java/org/sean/recursive/RootLeafSumPathFinder.java) |
 | Search | [1011. Capacity To Ship Packages Within D Days](./src/main/java/org/sean/search/PackageShip.java) |
 |   | [1802. Maximum Value at a Given Index in a Bounded Array](./src/main/java/org/sean/search/BoundedArray.java) |
+|   | [2812. Find the Safest Path in a Grid](./src/main/java/org/sean/search/SafestPathFinder.java) |
 |   | [2616. Minimize the Maximum Difference of Pairs](./src/main/java/org/sean/search/MinPairsDiff.java) |
 | Concurrency | [1114. Print in Order](./src/main/java/org/sean/concurrency/OrderPrinter.java) |
 |   | [1115 Print FooBar Alternately](./src/main/java/org/sean/concurrency/FooBar.java) |
@@ -157,10 +161,12 @@
 |   | [1416. Restore The Array](./src/main/java/org/sean/dynamicpro/IntArray.java) |
 |   | [823. Binary Trees With Factors](./src/main/java/org/sean/dynamicpro/FactoredBinaryTree.java) |
 |   | [392. Is Subsequence](./src/main/java/org/sean/dynamicpro/SubsequenceChecker.java) |
+|   | [85. Maximal Rectangle](./src/main/java/org/sean/dynamicpro/MaxRectangle.java) |
 |   | [1359. Count All Valid Pickup and Delivery Options](./src/main/java/org/sean/dynamicpro/OrderCounter.java) |
 |   | [377. Combination Sum IV](./src/main/java/org/sean/dynamicpro/CombinationSum4.java) |
 |   | [300. Longest Increasing Subsequence](./src/main/java/org/sean/dynamicpro/Lis.java) |
 |   | [474. Ones and Zeroes](./src/main/java/org/sean/dynamicpro/OnesAndZeroes.java) |
+|   | [1043. Partition Array for Maximum Sum](./src/main/java/org/sean/dynamicpro/PartitionArray.java) |
 |   | [322. Coin Change](./src/main/java/org/sean/dynamicpro/CoinExchanger.java) |
 | Stack | [224. Basic Calculator](./src/main/java/org/sean/stack/BasicCalculator.java) |
 |   | [739. Daily Temperatures](./src/main/java/org/sean/stack/DailyTemp.java) |
