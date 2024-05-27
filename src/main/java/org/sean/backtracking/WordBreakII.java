@@ -6,29 +6,23 @@ import java.util.*;
  * 140. Word Break II
  */
 public class WordBreakII {
-    private List<String> outputs = new ArrayList<>();
+    List<String> out = new ArrayList<>();
 
-    private void lookupWords(
-            String s, List<String> wordDict, int currIndex, LinkedList<String> words) {
-        int len = s.length();
-        if (currIndex >= len) {
-            int totalLen = words.stream().mapToInt(String::length).sum();
-            if (totalLen == len) {
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < words.size(); i++) {
-                    builder.append(words.get(i));
-                    if (i != words.size() - 1) builder.append(' ');
-                }
-                outputs.add(builder.toString());
+    private void lookupWords(String s, int pos, List<String> parts, int size, Set<String> set) {
+        if (pos >= s.length()) {
+            //int len = parts.stream().mapToInt(value -> value.length()).sum();
+            if (size == s.length()) {
+                out.add(String.join(" ", parts));
             }
             return;
         }
-        for (int j = currIndex + 1; j <= len; j++) {
-            String sub = s.substring(currIndex, j);
-            if (wordDict.contains(sub)) {
-                words.add(sub);
-                lookupWords(s, wordDict, j, words);
-                words.removeLast();
+
+        for (int i = pos; i < s.length(); i++) {
+            String word = s.substring(pos, i + 1);
+            if (set.contains(word)) {
+                parts.add(word);
+                lookupWords(s, i + 1, parts, size + word.length(), set);
+                parts.remove(parts.size() - 1);
             }
         }
     }
@@ -36,13 +30,15 @@ public class WordBreakII {
     public List<String> wordBreak(String s, List<String> wordDict) {
         if (s == null || s.length() == 0) return Collections.emptyList();
 
-        if (s.length() == 1) {
-            if (wordDict.contains(s)) return Collections.singletonList(s);
-            else return Collections.emptyList();
-        }
+        //  all such possible sentences in any order.
+        HashSet<String> dict = new HashSet<>(wordDict);
+        //  catsanddog
+        // cat{sanddog}
+        // cats{anddog}
+        // ...
 
-        lookupWords(s, wordDict, 0, new LinkedList<>());
+        lookupWords(s, 0, new ArrayList<>(), 0, dict);
 
-        return outputs;
+        return out;
     }
 }

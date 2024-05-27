@@ -1,8 +1,33 @@
-package org.sean.backtracking;
+package org.sean.graph;
 
 // 463. Island Perimeter
 public class IslandPerimeterCalculator {
+
     public int islandPerimeter(int[][] grid) {
+        int rowCnt = grid.length;
+        int colCnt = grid[0].length;
+
+        int res = 0;
+        for (int i = 0; i < rowCnt; i++) {
+            for (int j = 0; j < colCnt; j++) {
+                int cell = grid[i][j];
+
+                if (cell == 1) {
+                    for (int[] mv : offsets) {
+                        int nR = i + mv[0];
+                        int nC = j + mv[1];
+
+                        if (isInvalidPos(nR, nC, grid) || grid[nR][nC] == 0) {
+                            res++;
+                        }
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    public int islandPerimeter0(int[][] grid) {
         int row = grid.length;
         int col = grid[0].length;
 
